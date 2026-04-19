@@ -13,7 +13,7 @@ export default function Home() {
     <main className="bg-black min-h-screen">
       <Navbar />
       <HeroSection />
-      <div className="max-w-[1200px] mx-auto px-[8%]">
+      <div className="max-w-[1400px] mx-auto px-[8%]">
         <SectionDivider />
         <AboutSection />
         <SectionDivider />

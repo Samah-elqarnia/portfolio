@@ -32,7 +32,7 @@ export default function Navbar() {
         borderBottom: scrolled ? '0.5px solid rgba(192,128,129,0.15)' : 'none',
       }}
     >
-      <div className="max-w-[1200px] mx-auto px-[8%] h-16 flex items-center justify-between">
+      <div className="max-w-[1400px] mx-auto px-[8%] h-16 flex items-center justify-between">
         {/* Logo */}
         <span className="font-serif text-[17px] tracking-[2px] text-rose-light">
           S. EL QARNIA

@@ -6,11 +6,11 @@ import { SectionHeader, Tag } from '@/components/ui/Elements'
 import { projects, type Project } from '@/data/portfolio'
 
 const categoryEmoji: Record<string, string> = {
-  'IA · RAG':         '🤖',
-  'Web · Firebase':   '🚗',
-  'E-commerce · MERN':'🛒',
-  'Cybersécurité':    '🔐',
-  'Desktop · Java':   '🧠',
+  'IA · RAG': '🤖',
+  'Web · Firebase': '🚗',
+  'E-commerce · MERN': '🛒',
+  'Cybersécurité': '🔐',
+  'Desktop · Java': '🧠',
 }
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
@@ -127,12 +127,7 @@ export default function ProjectsSection() {
         ))}
       </div>
 
-      <p className="mt-8 text-[12px] text-cream/25 text-center">
-        💡 Pour ajouter vos screenshots — placez les images dans{' '}
-        <code className="text-rose/50">/public/projects/</code> et renseignez le champ{' '}
-        <code className="text-rose/50">image</code> dans{' '}
-        <code className="text-rose/50">src/data/portfolio.ts</code>
-      </p>
+
     </section>
   )
 }

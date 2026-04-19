@@ -188,7 +188,7 @@ export default function ContactSection() {
             italic="ensemble"
           />
           <p className="text-cream-dim text-[15px] leading-relaxed mb-8">
-            Ouverte aux opportunités de stage, collaboration ou freelance.
+            Ouverte aux opportunités de stage, de travail, Collaboration ou Freelance.
             N'hésitez pas — je réponds toujours.
           </p>
 

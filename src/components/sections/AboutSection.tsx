@@ -34,15 +34,10 @@ export default function AboutSection() {
           sécurité et intelligence artificielle.
         </p>
         <p className="text-cream-dim text-[15px] leading-[1.9] mb-8">
-          Je touche à tout ce qui me fascine : du développement full-stack et des
-          pipelines RAG, à la finance quantitative et au pentesting. Chaque projet
-          est une occasion d'aller plus loin.
+          Je touche à tout ce qui me fascine : du développement full-stack , des
+          pipelines ML/AI , à la finance quantitative . Chaque projet est une occasion d'aller plus loin.
         </p>
-        <div className="flex flex-wrap gap-2">
-          <Badge>ENSET Mohammedia</Badge>
-          <Badge>2024 → 2026</Badge>
-          <Badge>Cycle Ingénieur</Badge>
-        </div>
+
       </div>
 
       {/* Stats grid */}
