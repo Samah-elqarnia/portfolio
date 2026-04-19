@@ -116,10 +116,12 @@ export function ButtonOutline({
 export function Card({
   children,
   className,
+  style,
   hover = true,
 }: {
   children: React.ReactNode
   className?: string
+  style?: React.CSSProperties
   hover?: boolean
 }) {
   return (
@@ -132,6 +134,7 @@ export function Card({
       style={{
         background: '#141414',
         border: '0.5px solid rgba(192,128,129,0.18)',
+        ...style,
       }}
     >
       {children}

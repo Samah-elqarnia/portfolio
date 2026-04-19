@@ -75,6 +75,8 @@ export const skills = [
 ]
 
 // ── Projects ──────────────────────────────────────────────────
+import type { StaticImageData } from 'next/image'
+
 export type Project = {
   id: string
   name: string
@@ -84,7 +86,7 @@ export type Project = {
   category: string
   github: string
   demo?: string
-  image?: string
+  image?: string | StaticImageData
 }
 
 export const projects: Project[] = [
