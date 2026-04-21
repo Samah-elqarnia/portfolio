@@ -110,6 +110,17 @@ export const projects: Project[] = [
     github: 'https://github.com/Samah-elqarnia',
     image: topautoImg,
   },
+
+  {
+    id: 'quant',
+    name: 'pipeline de construction quantitative du portfolio',
+    subtitle: 'Pipeline quantitative',
+    desc: 'Full quantitative asset selection and portfolio optimization workflow using S&P 500 stocks, factor models, clustering, and modern portfolio theory.',
+    tags: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'ML'],
+    category: 'Finance quantitative',
+    github: 'https://github.com/Samah-elqarnia',
+    image: quantImg,
+  },
   {
     id: 'luxepedia',
     name: 'Luxepedia',
@@ -159,17 +170,7 @@ export const projects: Project[] = [
     category: 'Mobile',
     github: 'https://github.com/Samah-elqarnia',
     image: mobileImg,
-  },
-  {
-    id: 'quant',
-    name: 'pipeline de construction quantitative du portfolio',
-    subtitle: 'Pipeline quantitative',
-    desc: 'Full quantitative asset selection and portfolio optimization workflow using S&P 500 stocks, factor models, clustering, and modern portfolio theory.',
-    tags: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'ML'],
-    category: 'Finance quantitative',
-    github: 'https://github.com/Samah-elqarnia',
-    image: quantImg,
-  },
+  }
 ]
 
 // ── Experience ────────────────────────────────────────────────
