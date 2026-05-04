@@ -35,7 +35,7 @@ export default function AboutSection() {
         </p>
         <p className="text-cream-dim text-[15px] leading-[1.9] mb-8">
           Je touche à tout ce qui me fascine : du développement full-stack , des
-          pipelines ML/AI , à la finance quantitative . Chaque projet est une occasion d'aller plus loin.
+          pipelines ML/AI , appliqué en divers domaines principalement la cybersécurité et la finance.
         </p>
 
       </div>

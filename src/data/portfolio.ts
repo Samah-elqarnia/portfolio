@@ -9,17 +9,19 @@ import securityImg from './assets/website.png'
 import wellnessImg from './assets/wellness.png'
 import mobileImg from './assets/mobile.png'
 import quantImg from './assets/quant.png'
+import newsImg from './assets/newsai.png'
+import FraudImg from './assets/fraud.png'
 
 export const personalInfo = {
   name: 'Samah EL QARNIA',
   title: 'Software Engineer · Cybersecurity Enthusiast',
-  tagline: 'Je conçois des expériences numériques où l\'esthétique moderne rencontre la rigueur technique. Des landing pages aux applications web complexes, je bâtis des systèmes scalables avec une priorité absolue : la sécurité dès la conception. Mon objectif est de transformer des idées ambitieuses en produits numériques élégants, performants et durablement protégés',
+  tagline: 'Experte en développement Full Stack, je bâtis des systèmes scalables et performants, propulsés par l intégration native de l Intelligence Artificielle et du Machine Learning.Ma force réside dans la fusion de l innovation et de la résilience : chaque solution est développée selon le paradigme du Security by Design, garantissant des produits numériques élégants, durablement protégés et capables de transformer des données complexes en leviers de croissance intelligents.',
   location: 'Mohammedia, Maroc',
   email: 'elqarniasamah@gmail.com',
   phone: '+212 770 619 376',
   github: 'https://github.com/Samah-elqarnia',
   linkedin: 'https://linkedin.com/in/samah-el-qarnia',
-  cvUrl: '/cv-samah-elqarnia.pdf',   // Place your CV PDF in /public
+  cvUrl: 'src\\data\\resume-samah-1.pdf',   // Place your CV PDF in /public
   languages: [
     { lang: 'Anglais', level: 'C1', flag: '🇬🇧' },
     { lang: 'Français', level: 'B2', flag: '🇫🇷' },
@@ -38,21 +40,21 @@ export const stats = [
 export const skills = [
   {
     icon: '⬡',
-    title: 'Développement Web & Mobile',
+    title: 'Développement Web Full-stack',
     desc: 'Full-stack moderne, de l\'analyse des besoins au déploiement. APIs robustes, UX soignée.',
-    tags: ['React.js', 'Node.js', 'Express.js', 'FastAPI', 'Firebase', 'MongoDB', 'MySQL', 'Docker', 'REST API'],
+    tags: ['React.js', 'Node.js', 'Express.js', 'FastAPI', 'Firebase', 'MongoDB', 'MySQL', 'PostgreSQL', 'Docker', 'REST API'],
   },
   {
     icon: '◈',
     title: 'Intelligence Artificielle',
     desc: 'Pipelines RAG, agents LLM, automatisation intelligente et intégration de l\'IA dans des systèmes réels.',
-    tags: ['LangChain', 'RAG', 'TensorFlow', 'PyTorch', 'scikit-learn', 'n8n', 'Qdrant'],
+    tags: ['LangChain', 'RAG', 'scikit-learn', 'LLMs','n8n', 'Qdrant'],
   },
   {
     icon: '◇',
     title: 'Cybersécurité',
-    desc: 'Ethical hacking, pentest web & réseau, analyse de vulnérabilités et sécurité des systèmes.',
-    tags: ['Kali Linux', 'Basic Pentesting', 'CCNA', 'Bash', 'SSL/TLS'],
+    desc: 'basic pentest web & réseau, analyse de vulnérabilités et sécurité des systèmes.',
+    tags: [ 'Kali Linux', 'CCNA', 'Bash', 'SSL/TLS'],
   },
   {
     icon: '◻',
@@ -101,6 +103,16 @@ export const projects: Project[] = [
     image: chatbotImg,
   },
   {
+    id: 'AI powered financial news bias dashboard',
+    name: 'AI powered financial news bias dashboard',
+    subtitle: 'application web de signaux de sentiment de marché',
+    desc: 'Un dashboard integrant IA qui analyse les articles d actualité financière pour générer des signaux (haussiers, baissiers ou neutres) pour divers classes d actifs',
+    tags: ['React.js', 'Mistral AI', 'mySQL', 'fastAPI'],
+    category: 'IA',
+    github: 'https://github.com/Samah-elqarnia',
+    image: newsImg,
+  },
+  {
     id: 'topauto',
     name: 'TOPAUTO',
     subtitle: 'Site web pour un concessionnaire automobile',
@@ -120,6 +132,16 @@ export const projects: Project[] = [
     category: 'Finance quantitative',
     github: 'https://github.com/Samah-elqarnia',
     image: quantImg,
+  },
+  {
+    id: 'fraud',
+    name: 'detection de fraud sur les transactions bancaires',
+    subtitle: 'application web de detection de fraud',
+    desc: 'interface web qui analyse les transactions en temps reel, et detecte si une transaction est legitime ou frauduleuse grace au modéle de regression logistique',
+    tags: ['React.js', 'FastApi', 'Scikit-learn'],
+    category: 'machine learning',
+    github: 'https://github.com/Samah-elqarnia',
+    image: FraudImg,
   },
   {
     id: 'luxepedia',
@@ -177,11 +199,11 @@ export const projects: Project[] = [
 export const experiences = [
   {
     date: 'Janv. 2025 → Janv. 2026',
-    role: 'Développeur Web & Mobile — Freelance',
+    role: 'Développeur Web — Freelance',
     company: 'Indépendant',
     points: [
       'Application mobile de gestion pour une association de protection animale',
-      'Projets e-commerce full-stack (Luxepedia, TechPlace) de l\'analyse au déploiement',
+      'Projets e-commerce full-stack de l\'analyse au déploiement',
       'Stack : MERN, Firebase, Stripe, Clerk, Cloudinary, Inngest',
     ],
   },
@@ -223,10 +245,21 @@ export const certifications = [
   { name: 'Ethical Hacker', org: 'Cisco Network Academy' },
   { name: 'Linux Unhatched & Essentials', org: 'Cisco Network Academy' },
   { name: 'CCNA', org: 'Cisco Network Academy' },
-  { name: 'Python Essentials 1 & 2', org: 'Cisco Network Academy' },
-  { name: 'System Administration 1 & 2', org: 'Red Hat Academy' },
-  { name: 'Derivatives & Technical Analysis', org: '325 Financial Analyst' },
-  { name: '+10 autres certifications', org: 'Divers organismes' },
+  { name: 'Python Essentials 1', org: 'Cisco Network Academy' },
+  { name: 'Python Essentials 2', org: 'Cisco Network Academy' },
+  { name: 'AWS cloud practitioner essentials', org: 'AWS' },
+  { name: 'introduction to data science', org: 'Cisco Network Academy' },  
+  { name: 'machine learning', org: '325 Financial Analyst' },  
+  { name: 'Derivatives', org: '325 Financial Analyst' },
+  { name: 'Technical Analysis', org: '325 Financial Analyst' },
+  { name: 'introduction to python', org: '325 Financial Analyst' },
+  { name: 'introduction to mongodb', org: 'MongoDB' },
+  { name: 'intoduction to data science', org: 'Cisco Network Academy' },  
+  { name: 'System Administration 1', org: 'Red Hat Academy' },
+  { name: 'System Administration 2', org: 'Red Hat Academy' },
+  { name: 'AI fundamentals with IBM', org: 'cisco network academy' },
+  { name: 'introduction to MCP', org: 'Anthropic' },
+  
 ]
 
 // ── Tech Stack ────────────────────────────────────────────────
