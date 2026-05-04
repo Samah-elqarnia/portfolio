@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -31,7 +32,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" className="grain-overlay">
-      <body>{children}</body>
+      <body>
+        <Script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" />
+        {children}
+      </body>
     </html>
   )
 }

@@ -1,6 +1,7 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import emailjs from '@emailjs/browser'
 import { useScrollReveal } from '@/hooks/useScrollReveal'
 import { SectionHeader } from '@/components/ui/Elements'
 import { personalInfo } from '@/data/portfolio'
@@ -41,6 +42,10 @@ function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'done'>('idle')
   const [form, setForm] = useState({ name: '', email: '', message: '' })
 
+  useEffect(() => {
+    emailjs.init({ publicKey: "ycBPUQTVSishm3rC8" });
+  }, [])
+
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) {
@@ -50,10 +55,24 @@ function ContactForm() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     setStatus('sending')
-    // ── Replace with your preferred form API (Formspree, Resend, etc.) ──
-    await new Promise((r) => setTimeout(r, 1200))
-    setStatus('done')
-    setForm({ name: '', email: '', message: '' })
+
+    const templateParams = {
+      from_name: form.name,
+      from_email: form.email,
+      message: form.message,
+      reply_to: form.email,
+    }
+
+    try {
+      await emailjs.send("portfolio", "template_3okrkub", templateParams)
+      alert("✅ Message envoyé !")
+      setForm({ name: '', email: '', message: '' })
+      setStatus('done')
+    } catch (err) {
+      console.error(err)
+      alert("❌ Erreur, réessayez.")
+      setStatus('idle')
+    }
   }
 
   const inputStyle: React.CSSProperties = {
@@ -77,6 +96,7 @@ function ContactForm() {
             Nom
           </label>
           <input
+            id="nom"
             name="name"
             type="text"
             required
@@ -97,6 +117,7 @@ function ContactForm() {
             Email
           </label>
           <input
+            id="email"
             name="email"
             type="email"
             required
@@ -119,6 +140,7 @@ function ContactForm() {
           Message
         </label>
         <textarea
+          id="message"
           name="message"
           required
           rows={5}
@@ -136,6 +158,7 @@ function ContactForm() {
       </div>
 
       <button
+        id="sendBtn"
         type="submit"
         disabled={status === 'sending' || status === 'done'}
         className="w-full py-3.5 rounded-full text-[12px] tracking-[2px]
