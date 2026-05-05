@@ -11,6 +11,21 @@ import mobileImg from './assets/mobile.png'
 import quantImg from './assets/quant.png'
 import newsImg from './assets/newsai.png'
 import FraudImg from './assets/fraud.png'
+import python1 from './assets/python1.png'
+import python2 from './assets/python2.png'
+import ccna from './assets/CCNA.png'
+import AI from './assets//AI.png'
+import aws from './assets/aws.png'
+import python from './assets/python.png'
+import mongodb from './assets/mongodb.png'
+import mcp from './assets/MCP.png'
+import ml from './assets/ml.png'
+import datascience from './assets/datascience.png'
+import analysis from './assets/analysis.png'
+import derivatives from './assets/derivatives.png'
+import admin1 from './assets/admin1.png'
+import linux from './assets/linux.png'
+
 
 export const personalInfo = {
   name: 'Samah EL QARNIA',
@@ -20,7 +35,7 @@ export const personalInfo = {
   email: 'elqarniasamah@gmail.com',
   phone: '+212 770 619 376',
   github: 'https://github.com/Samah-elqarnia',
-  linkedin: 'https://linkedin.com/in/samah-el-qarnia',
+  linkedin: 'https://www.linkedin.com/in/samah-el-qarnia-676811354',
   cvUrl: 'src\\data\\resume-samah-1.pdf',   // Place your CV PDF in /public
   languages: [
     { lang: 'Anglais', level: 'C1', flag: '🇬🇧' },
@@ -242,23 +257,22 @@ export const education = [
 
 // ── Certifications ────────────────────────────────────────────
 export const certifications = [
-  { name: 'Ethical Hacker', org: 'Cisco Network Academy' },
-  { name: 'Linux Unhatched & Essentials', org: 'Cisco Network Academy' },
-  { name: 'CCNA', org: 'Cisco Network Academy' },
-  { name: 'Python Essentials 1', org: 'Cisco Network Academy' },
-  { name: 'Python Essentials 2', org: 'Cisco Network Academy' },
-  { name: 'AWS cloud practitioner essentials', org: 'AWS' },
-  { name: 'introduction to data science', org: 'Cisco Network Academy' },  
-  { name: 'machine learning', org: '325 Financial Analyst' },  
-  { name: 'Derivatives', org: '325 Financial Analyst' },
-  { name: 'Technical Analysis', org: '325 Financial Analyst' },
-  { name: 'introduction to python', org: '325 Financial Analyst' },
-  { name: 'introduction to mongodb', org: 'MongoDB' },
-  { name: 'intoduction to data science', org: 'Cisco Network Academy' },  
-  { name: 'System Administration 1', org: 'Red Hat Academy' },
-  { name: 'System Administration 2', org: 'Red Hat Academy' },
-  { name: 'AI fundamentals with IBM', org: 'cisco network academy' },
-  { name: 'introduction to MCP', org: 'Anthropic' },
+  { name: 'Ethical Hacker', org: 'Cisco Network Academy', image: '/certificates/ethical-hacker.jpg' },
+  { name: 'Linux Unhatched & Essentials', org: 'Cisco Network Academy', image: linux },
+  { name: 'CCNA', org: 'Cisco Network Academy', image: ccna },
+  { name: 'Python Essentials 1', org: 'Cisco Network Academy', image: python1 },
+  { name: 'Python Essentials 2', org: 'Cisco Network Academy', image: python2},
+  { name: 'AWS cloud practitioner essentials', org: 'AWS', image: aws },
+  { name: 'introduction to data science', org: 'Cisco Network Academy', image: datascience },  
+  { name: 'machine learning', org: '325 Financial Analyst', image: ml },  
+  { name: 'Derivatives', org: '325 Financial Analyst', image: derivatives },
+  { name: 'Technical Analysis', org: '325 Financial Analyst', image: analysis },
+  { name: 'introduction to python', org: '325 Financial Analyst', image: python },
+  { name: 'introduction to mongodb', org: 'MongoDB', image: mongodb }, 
+  { name: 'System Administration 1', org: 'Red Hat Academy', image: admin1 },
+  { name: 'System Administration 2', org: 'Red Hat Academy', image: '/certificates/sysadmin2.jpg' },
+  { name: 'AI fundamentals with IBM', org: 'cisco network academy', image: AI },
+  { name: 'Introduction to MCP', org: 'Anthropic', image: mcp },
   
 ]
 

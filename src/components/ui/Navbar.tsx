@@ -50,16 +50,6 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a
-            href={personalInfo.cvUrl}
-            download
-            className="text-[11px] tracking-[1.5px] uppercase font-medium
-                       px-4 py-2 rounded-full border text-rose-light
-                       hover:bg-rose hover:text-black transition-all duration-200"
-            style={{ borderColor: 'rgba(192,128,129,0.4)' }}
-          >
-            CV ↓
-          </a>
         </div>
 
         {/* Mobile burger */}

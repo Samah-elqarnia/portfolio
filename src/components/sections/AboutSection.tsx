@@ -28,7 +28,7 @@ export default function AboutSection() {
         />
         <p className="text-cream-dim text-[15px] leading-[1.9] mb-4">
           Élève ingénieure en 2ème année cycle ingénieur à l'ENSET Mohammedia,
-          spécialisation <span className="text-rose-light">Cybersécurité et Confiance Numérique</span>.
+          en <span className="text-rose-light">ingénierie informatique : Cybersécurité et Confiance Numérique</span>.
           Mon parcours commence à la FST Mohammedia (DEUST 2022-2024) et se poursuit
           avec une ambition claire : concevoir des systèmes qui allient performance,
           sécurité et intelligence artificielle.

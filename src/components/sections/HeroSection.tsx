@@ -74,9 +74,6 @@ export default function HeroSection() {
             <ButtonPrimary href={`mailto:${personalInfo.email}`}>
               Me contacter ↗
             </ButtonPrimary>
-            <ButtonOutline href={personalInfo.cvUrl} download>
-              Télécharger le CV ↓
-            </ButtonOutline>
             <ButtonOutline href={personalInfo.github} target="_blank">
               GitHub ↗
             </ButtonOutline>
