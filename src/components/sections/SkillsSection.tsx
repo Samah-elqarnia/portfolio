@@ -3,13 +3,15 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal'
 import { SectionHeader, Tag, Card } from '@/components/ui/Elements'
 import { skills } from '@/data/portfolio'
+import { useLanguage } from '@/context/LanguageContext'
 
 export default function SkillsSection() {
   const { ref, isVisible } = useScrollReveal()
+  const { t } = useLanguage()
 
   return (
     <section id="skills" className="py-24">
-      <SectionHeader label="Expertise" title="Ce que je" italic="maîtrise" />
+      <SectionHeader label={t.skills.label} title={t.skills.title} italic={t.skills.italic} />
 
       <div
         ref={ref}

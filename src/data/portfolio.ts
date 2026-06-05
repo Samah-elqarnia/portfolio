@@ -25,12 +25,19 @@ import analysis from './assets/analysis.png'
 import derivatives from './assets/derivatives.png'
 import admin1 from './assets/admin1.png'
 import linux from './assets/linux.png'
+import blockchain from './assets/blockchain.png'
+import eth from './assets/hacking.png'
+import adminforti from './assets/adminforti.png'
+import advancedmcp from './assets/advancedmcp.png'
+import awsfound from './assets/awsfound.png'
+import awssec from './assets/awssec.png'
+
 
 
 export const personalInfo = {
   name: 'Samah EL QARNIA',
   title: 'Software Engineer · Cybersecurity Enthusiast',
-  tagline: 'Experte en développement Full Stack, je bâtis des systèmes scalables et performants, propulsés par l intégration native de l Intelligence Artificielle et du Machine Learning.Ma force réside dans la fusion de l innovation et de la résilience : chaque solution est développée selon le paradigme du Security by Design, garantissant des produits numériques élégants, durablement protégés et capables de transformer des données complexes en leviers de croissance intelligents.',
+  tagline: 'Développement Full Stack, je bâtis des systèmes scalables et performants, propulsés par l intégration native de l Intelligence Artificielle et du Machine Learning.Ma force réside dans la fusion de l innovation et de la résilience : chaque solution est développée selon le paradigme du Security by Design, garantissant des produits numériques élégants, durablement protégés et capables de transformer des données complexes en leviers de croissance intelligents.',
   location: 'Mohammedia, Maroc',
   email: 'elqarniasamah@gmail.com',
   phone: '+212 770 619 376',
@@ -63,13 +70,13 @@ export const skills = [
     icon: '◈',
     title: 'Intelligence Artificielle',
     desc: 'Pipelines RAG, agents LLM, automatisation intelligente et intégration de l\'IA dans des systèmes réels.',
-    tags: ['LangChain', 'RAG', 'scikit-learn', 'LLMs','n8n', 'Qdrant'],
+    tags: ['LangChain', 'RAG', 'scikit-learn', 'LLMs', 'n8n', 'Qdrant'],
   },
   {
     icon: '◇',
     title: 'Cybersécurité',
     desc: 'basic pentest web & réseau, analyse de vulnérabilités et sécurité des systèmes.',
-    tags: [ 'Kali Linux', 'CCNA', 'Bash', 'SSL/TLS'],
+    tags: ['Kali Linux', 'CCNA', 'Bash', 'SSL/TLS'],
   },
   {
     icon: '◻',
@@ -257,23 +264,28 @@ export const education = [
 
 // ── Certifications ────────────────────────────────────────────
 export const certifications = [
-  { name: 'Ethical Hacker', org: 'Cisco Network Academy', image: '/certificates/ethical-hacker.jpg' },
-  { name: 'Linux Unhatched & Essentials', org: 'Cisco Network Academy', image: linux },
-  { name: 'CCNA', org: 'Cisco Network Academy', image: ccna },
+  { name: 'AWS security foundations', org: 'AWS', image: awssec },
+  { name: 'AWS foundations ', org: 'AWS', image: awsfound },
   { name: 'Python Essentials 1', org: 'Cisco Network Academy', image: python1 },
-  { name: 'Python Essentials 2', org: 'Cisco Network Academy', image: python2},
+  { name: 'Python Essentials 2', org: 'Cisco Network Academy', image: python2 },
   { name: 'AWS cloud practitioner essentials', org: 'AWS', image: aws },
-  { name: 'introduction to data science', org: 'Cisco Network Academy', image: datascience },  
-  { name: 'machine learning', org: '325 Financial Analyst', image: ml },  
+  { name: 'AI fundamentals with IBM', org: 'cisco network academy', image: AI },
+  { name: 'MCP : Advanced topics', org: 'Anthropic', image: advancedmcp },
+  { name: 'Introduction to MCP', org: 'Anthropic', image: mcp },
+  { name: 'introduction to data science', org: 'Cisco Network Academy', image: datascience },
+  { name: 'machine learning', org: '325 Financial Analyst', image: ml },
   { name: 'Derivatives', org: '325 Financial Analyst', image: derivatives },
   { name: 'Technical Analysis', org: '325 Financial Analyst', image: analysis },
   { name: 'introduction to python', org: '325 Financial Analyst', image: python },
-  { name: 'introduction to mongodb', org: 'MongoDB', image: mongodb }, 
+  { name: 'introduction to mongodb', org: 'MongoDB', image: mongodb },
+  { name: 'fortiOS administrator', org: 'fortinet', image: adminforti },
+  { name: 'Blockchain fundamentals', org: 'fortinet', image: blockchain },
+  { name: 'Ethical Hacker', org: 'Cisco Network Academy', image: eth },
+  { name: 'Linux Unhatched & Essentials', org: 'Cisco Network Academy', image: linux },
+  { name: 'CCNA', org: 'Cisco Network Academy', image: ccna },
   { name: 'System Administration 1', org: 'Red Hat Academy', image: admin1 },
   { name: 'System Administration 2', org: 'Red Hat Academy', image: '/certificates/sysadmin2.jpg' },
-  { name: 'AI fundamentals with IBM', org: 'cisco network academy', image: AI },
-  { name: 'Introduction to MCP', org: 'Anthropic', image: mcp },
-  
+
 ]
 
 // ── Tech Stack ────────────────────────────────────────────────

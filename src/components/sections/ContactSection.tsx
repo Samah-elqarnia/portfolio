@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser'
 import { useScrollReveal } from '@/hooks/useScrollReveal'
 import { SectionHeader } from '@/components/ui/Elements'
 import { personalInfo } from '@/data/portfolio'
+import { useLanguage } from '@/context/LanguageContext'
 
 // ── Social link pill ──────────────────────────────────────────
 function ContactPill({
@@ -52,6 +53,8 @@ function ContactForm() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
+  const { t } = useLanguage()
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     setStatus('sending')
@@ -65,12 +68,12 @@ function ContactForm() {
 
     try {
       await emailjs.send("portfolio", "template_3okrkub", templateParams)
-      alert("✅ Message envoyé !")
+      alert(t.contact.alertSuccess)
       setForm({ name: '', email: '', message: '' })
       setStatus('done')
     } catch (err) {
       console.error(err)
-      alert("❌ Erreur, réessayez.")
+      alert(t.contact.alertError)
       setStatus('idle')
     }
   }
@@ -93,14 +96,14 @@ function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label className="text-[11px] tracking-[2px] uppercase text-cream/40 block mb-2">
-            Nom
+            {t.contact.name}
           </label>
           <input
             id="nom"
             name="name"
             type="text"
             required
-            placeholder="Votre nom"
+            placeholder={t.contact.placeholderName}
             value={form.name}
             onChange={handleChange}
             style={inputStyle}
@@ -114,14 +117,14 @@ function ContactForm() {
         </div>
         <div>
           <label className="text-[11px] tracking-[2px] uppercase text-cream/40 block mb-2">
-            Email
+            {t.contact.email}
           </label>
           <input
             id="email"
             name="email"
             type="email"
             required
-            placeholder="votre@email.com"
+            placeholder={t.contact.placeholderEmail}
             value={form.email}
             onChange={handleChange}
             style={inputStyle}
@@ -137,14 +140,14 @@ function ContactForm() {
 
       <div>
         <label className="text-[11px] tracking-[2px] uppercase text-cream/40 block mb-2">
-          Message
+          {t.contact.message}
         </label>
         <textarea
           id="message"
           name="message"
           required
           rows={5}
-          placeholder="Votre message..."
+          placeholder={t.contact.placeholderMessage}
           value={form.message}
           onChange={handleChange}
           style={{ ...inputStyle, resize: 'vertical' }}
@@ -169,13 +172,13 @@ function ContactForm() {
           color: status === 'done' ? '#EAF3DE' : '#0A0A0A',
         }}
       >
-        {status === 'idle' && 'Envoyer le message →'}
-        {status === 'sending' && 'Envoi en cours…'}
-        {status === 'done' && '✓ Message envoyé !'}
+        {status === 'idle' && t.contact.submit}
+        {status === 'sending' && t.contact.sending}
+        {status === 'done' && t.contact.sent}
       </button>
 
       <p className="text-[11px] text-cream/20 text-center">
-        Vous pouvez aussi écrire directement à{' '}
+        {t.contact.emailHint}{' '}
         <a
           href={`mailto:${personalInfo.email}`}
           className="text-rose/60 hover:text-rose transition-colors"
@@ -190,6 +193,7 @@ function ContactForm() {
 // ── Main Section ──────────────────────────────────────────────
 export default function ContactSection() {
   const { ref, isVisible } = useScrollReveal()
+  const { t } = useLanguage()
 
   return (
     <section id="contact" className="py-24">
@@ -206,13 +210,12 @@ export default function ContactSection() {
           }}
         >
           <SectionHeader
-            label="Contact"
-            title="Travaillons"
-            italic="ensemble"
+            label={t.contact.label}
+            title={t.contact.title}
+            italic={t.contact.italic}
           />
           <p className="text-cream-dim text-[15px] leading-relaxed mb-8">
-            Ouverte aux opportunités de stage, de travail, Collaboration ou Freelance.
-            N'hésitez pas — je réponds toujours.
+            {t.contact.intro}
           </p>
 
           {/* Email */}
@@ -268,7 +271,7 @@ export default function ContactSection() {
           }}
         >
           <p className="text-[11px] tracking-[3px] uppercase text-cream/30 mb-6">
-            Formulaire de contact
+            {t.contact.label}
           </p>
           {/* Note: Replace with Formspree or Resend for production email delivery */}
           <ContactForm />

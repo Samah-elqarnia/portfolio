@@ -1,9 +1,14 @@
-import { personalInfo, techStack } from '@/data/portfolio'
-import { Badge, ButtonPrimary, ButtonOutline } from '@/components/ui/Elements'
+'use client'
+
+import { useLanguage } from '@/context/LanguageContext'
+import { personalInfo } from '@/data/portfolio'
+import { ButtonPrimary, ButtonOutline } from '@/components/ui/Elements'
 import Image from 'next/image'
 import samahPhoto from '@/data/assets/samahphoto.png'
 
 export default function HeroSection() {
+  const { t } = useLanguage()
+
   return (
     <section
       id="hero"
@@ -35,7 +40,7 @@ export default function HeroSection() {
             className="text-[11px] tracking-[4px] uppercase text-rose mb-6
                        animate-fade-up text-center lg:text-left"
           >
-            Ingénieure Informatique · Mohammedia, Maroc
+            {t.hero.eyebrow}
           </p>
 
           {/* Name */}
@@ -55,15 +60,7 @@ export default function HeroSection() {
                        animate-fade-up delay-200 mx-auto lg:mx-0 text-center lg:text-left"
             style={{ opacity: 0 }}
           >
-            computer science engineering · AI & web Developer · Cybersecurity
-          </p>
-          <p
-            className="text-cream-dim text-[clamp(11px,1.8vw,15px)] font-light
-                       mt-2 lg:mb-10 mb-8 max-w-xl leading-relaxed tracking-wide
-                       animate-fade-up delay-200 mx-auto lg:mx-0 text-center lg:text-left"
-            style={{ opacity: 0 }}
-          >
-            {personalInfo.tagline}
+            {t.hero.tagline}
           </p>
 
           {/* CTAs */}
@@ -72,10 +69,10 @@ export default function HeroSection() {
             style={{ opacity: 0 }}
           >
             <ButtonPrimary href={`mailto:${personalInfo.email}`}>
-              Me contacter ↗
+              {t.hero.contact}
             </ButtonPrimary>
             <ButtonOutline href={personalInfo.github} target="_blank">
-              GitHub ↗
+              {t.hero.github}
             </ButtonOutline>
           </div>
         </div>
@@ -103,7 +100,7 @@ export default function HeroSection() {
       <div className="mt-16 flex items-center gap-3 animate-fade-up delay-600 justify-center lg:justify-start" style={{ opacity: 0 }}>
         <div className="w-8 h-px" style={{ background: 'rgba(245,245,245,0.15)' }} />
         <span className="text-[11px] tracking-[2px] uppercase text-cream/25">
-          Scroll pour explorer
+          {t.hero.scrollHint}
         </span>
       </div>
     </section>

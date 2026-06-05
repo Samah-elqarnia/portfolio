@@ -1,11 +1,13 @@
 'use client'
 
 import { useScrollReveal } from '@/hooks/useScrollReveal'
-import { SectionHeader, Badge } from '@/components/ui/Elements'
+import { SectionHeader } from '@/components/ui/Elements'
 import { stats } from '@/data/portfolio'
+import { useLanguage } from '@/context/LanguageContext'
 
 export default function AboutSection() {
   const { ref, isVisible } = useScrollReveal()
+  const { t } = useLanguage()
 
   return (
     <section
@@ -22,22 +24,16 @@ export default function AboutSection() {
         }}
       >
         <SectionHeader
-          label="À propos"
-          title="Ingénieure,"
-          italic="curieuse, construite pour résoudre"
+          label={t.about.label}
+          title={t.about.title}
+          italic={t.about.italic}
         />
         <p className="text-cream-dim text-[15px] leading-[1.9] mb-4">
-          Élève ingénieure en 2ème année cycle ingénieur à l'ENSET Mohammedia,
-          en <span className="text-rose-light">ingénierie informatique : Cybersécurité et Confiance Numérique</span>.
-          Mon parcours commence à la FST Mohammedia (DEUST 2022-2024) et se poursuit
-          avec une ambition claire : concevoir des systèmes qui allient performance,
-          sécurité et intelligence artificielle.
+          {t.about.paragraph1}
         </p>
         <p className="text-cream-dim text-[15px] leading-[1.9] mb-8">
-          Je touche à tout ce qui me fascine : du développement full-stack , des
-          pipelines ML/AI , appliqué en divers domaines principalement la cybersécurité et la finance.
+          {t.about.paragraph2}
         </p>
-
       </div>
 
       {/* Stats grid */}

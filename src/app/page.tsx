@@ -1,33 +1,36 @@
-import Navbar         from '@/components/ui/Navbar'
-import HeroSection    from '@/components/sections/HeroSection'
-import AboutSection   from '@/components/sections/AboutSection'
-import SkillsSection  from '@/components/sections/SkillsSection'
+import Navbar from '@/components/ui/Navbar'
+import HeroSection from '@/components/sections/HeroSection'
+import AboutSection from '@/components/sections/AboutSection'
+import SkillsSection from '@/components/sections/SkillsSection'
 import ProjectsSection from '@/components/sections/ProjectsSection'
 import ExperienceSection from '@/components/sections/ExperienceSection'
 import CertificationsSection from '@/components/sections/CertificationsSection'
 import ContactSection from '@/components/sections/ContactSection'
-import Footer         from '@/components/ui/Footer'
+import Footer from '@/components/ui/Footer'
+import { LanguageProvider } from '@/context/LanguageContext'
 
 export default function Home() {
   return (
     <main className="bg-black min-h-screen">
-      <Navbar />
-      <HeroSection />
-      <div className="max-w-[1400px] mx-auto px-[8%]">
-        <SectionDivider />
-        <AboutSection />
-        <SectionDivider />
-        <SkillsSection />
-        <SectionDivider />
-        <ProjectsSection />
-        <SectionDivider />
-        <ExperienceSection />
-        <SectionDivider />
-        <CertificationsSection />
-        <SectionDivider />
-        <ContactSection />
-      </div>
-      <Footer />
+      <LanguageProvider>
+        <Navbar />
+        <HeroSection />
+        <div className="max-w-[1400px] mx-auto px-[8%]">
+          <SectionDivider />
+          <AboutSection />
+          <SectionDivider />
+          <SkillsSection />
+          <SectionDivider />
+          <ProjectsSection />
+          <SectionDivider />
+          <ExperienceSection />
+          <SectionDivider />
+          <CertificationsSection />
+          <SectionDivider />
+          <ContactSection />
+        </div>
+        <Footer />
+      </LanguageProvider>
     </main>
   )
 }

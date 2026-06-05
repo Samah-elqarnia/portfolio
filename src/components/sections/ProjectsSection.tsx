@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useScrollReveal } from '@/hooks/useScrollReveal'
 import { SectionHeader, Tag } from '@/components/ui/Elements'
 import { projects, type Project } from '@/data/portfolio'
+import { useLanguage } from '@/context/LanguageContext'
 
 const categoryEmoji: Record<string, string> = {
   'IA · RAG': '🤖',
@@ -14,6 +15,7 @@ const categoryEmoji: Record<string, string> = {
 }
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
+  const { t } = useLanguage()
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>({ threshold: 0.08 })
 
   return (
@@ -48,13 +50,12 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         ) : (
-          /* Placeholder — replace with <Image> when screenshot is ready */
           <div className="w-full h-full flex flex-col items-center justify-center gap-3">
             <span className="text-4xl opacity-20">
               {categoryEmoji[project.category] ?? '📁'}
             </span>
             <p className="text-[11px] tracking-[2px] uppercase text-cream/20">
-              screenshot à venir
+              {t.projects.screenshotPlaceholder}
             </p>
           </div>
         )}
@@ -97,7 +98,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                        inline-flex items-center gap-1.5
                        hover:gap-3 transition-all duration-200"
           >
-            GitHub →
+            {t.projects.github}
           </a>
           {project.demo && (
             <a
@@ -107,7 +108,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               className="text-[11px] tracking-[2px] uppercase text-cream/30
                          hover:text-cream/60 transition-colors duration-200"
             >
-              Demo ↗
+              {t.projects.demo}
             </a>
           )}
         </div>
@@ -117,17 +118,17 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 }
 
 export default function ProjectsSection() {
+  const { t } = useLanguage()
+
   return (
     <section id="projects" className="py-24">
-      <SectionHeader label="Réalisations" title="Mes" italic="projets" />
+      <SectionHeader label={t.projects.label} title={t.projects.title} italic={t.projects.italic} />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, i) => (
           <ProjectCard key={project.id} project={project} index={i} />
         ))}
       </div>
-
-
     </section>
   )
 }

@@ -1,21 +1,12 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { personalInfo } from '@/data/portfolio'
-
-const navLinks = [
-  { href: '#about',          label: 'À propos' },
-  { href: '#skills',         label: 'Skills' },
-  { href: '#projects',       label: 'Projets' },
-  { href: '#experience',     label: 'Parcours' },
-  { href: '#certifications', label: 'Certs' },
-  { href: '#contact',        label: 'Contact' },
-]
+import { useLanguage } from '@/context/LanguageContext'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const { locale, toggleLocale, t } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40)
@@ -40,7 +31,7 @@ export default function Navbar() {
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-7">
-          {navLinks.map((link) => (
+          {t.navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
@@ -50,27 +41,45 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <button
+            type="button"
+            onClick={toggleLocale}
+            title={t.toggle.title}
+            className="text-[11px] tracking-[1.5px] uppercase text-cream-dim border border-cream-dim px-3 py-2 rounded-full hover:text-rose transition-colors duration-200"
+          >
+            {t.toggle.label}
+          </button>
         </div>
 
         {/* Mobile burger */}
-        <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Menu"
-        >
-          <span
-            className="block w-5 h-px bg-cream-dim transition-all duration-200"
-            style={{ transform: menuOpen ? 'rotate(45deg) translateY(4px)' : 'none' }}
-          />
-          <span
-            className="block w-5 h-px bg-cream-dim transition-all duration-200"
-            style={{ opacity: menuOpen ? 0 : 1 }}
-          />
-          <span
-            className="block w-5 h-px bg-cream-dim transition-all duration-200"
-            style={{ transform: menuOpen ? 'rotate(-45deg) translateY(-4px)' : 'none' }}
-          />
-        </button>
+        <div className="flex items-center gap-3 md:hidden">
+          <button
+            type="button"
+            onClick={toggleLocale}
+            title={t.toggle.title}
+            className="text-[11px] tracking-[1.5px] uppercase text-cream-dim border border-cream-dim px-3 py-2 rounded-full hover:text-rose transition-colors duration-200"
+          >
+            {t.toggle.label}
+          </button>
+          <button
+            className="flex flex-col gap-1.5 p-2"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Menu"
+          >
+            <span
+              className="block w-5 h-px bg-cream-dim transition-all duration-200"
+              style={{ transform: menuOpen ? 'rotate(45deg) translateY(4px)' : 'none' }}
+            />
+            <span
+              className="block w-5 h-px bg-cream-dim transition-all duration-200"
+              style={{ opacity: menuOpen ? 0 : 1 }}
+            />
+            <span
+              className="block w-5 h-px bg-cream-dim transition-all duration-200"
+              style={{ transform: menuOpen ? 'rotate(-45deg) translateY(-4px)' : 'none' }}
+            />
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -82,7 +91,7 @@ export default function Navbar() {
             borderColor: 'rgba(192,128,129,0.15)',
           }}
         >
-          {navLinks.map((link) => (
+          {t.navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}

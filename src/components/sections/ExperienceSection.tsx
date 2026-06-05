@@ -3,6 +3,7 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal'
 import { SectionHeader } from '@/components/ui/Elements'
 import { experiences, education } from '@/data/portfolio'
+import { useLanguage } from '@/context/LanguageContext'
 
 type TimelineItem = {
   date: string
@@ -70,16 +71,18 @@ function TimelineCard({
 }
 
 export default function ExperienceSection() {
+  const { t } = useLanguage()
+
   return (
     <section id="experience" className="py-24">
-      <SectionHeader label="Parcours" title="Mon" italic="chemin" />
+      <SectionHeader label={t.experience.label} title={t.experience.title} italic={t.experience.italic} />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
 
         {/* Left — Professional */}
         <div>
           <p className="text-[11px] tracking-[3px] uppercase text-cream/30 mb-8">
-            Expériences professionnelles
+            {t.experience.professional}
           </p>
           <div
             className="relative pl-6 timeline-line"
@@ -94,7 +97,7 @@ export default function ExperienceSection() {
         {/* Right — Education */}
         <div>
           <p className="text-[11px] tracking-[3px] uppercase text-cream/30 mb-8">
-            Formation académique
+            {t.experience.education}
           </p>
           <div
             className="relative pl-6"
