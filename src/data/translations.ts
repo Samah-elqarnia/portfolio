@@ -12,7 +12,7 @@ export const translations = {
     ],
     hero: {
       eyebrow: 'Ingénieure Informatique · Mohammedia, Maroc',
-      tagline: 'Experte en développement Full Stack, Cybersécurité et IA, je conçois des systèmes performants et sécurisés.',
+      tagline: 'Experte en développement web  Full Stack, systémes intelligents et securisées par intégration de l\'IA et des modéles ML ',
       contact: 'Me contacter ↗',
       github: 'GitHub ↗',
       scrollHint: 'Scroll pour explorer',
@@ -22,7 +22,7 @@ export const translations = {
       title: 'Ingénieure,',
       italic: 'curieuse, construite pour résoudre',
       paragraph1:
-        "Élève ingénieure en 2ème année cycle ingénieur à l'ENSET Mohammedia, en ingénierie informatique : Cybersécurité et Confiance Numérique. Mon parcours commence à la FST Mohammedia (DEUST 2022-2024) et se poursuit avec une ambition claire : concevoir des systèmes qui allient performance, sécurité et intelligence artificielle.",
+        "Élève ingénieure en 3ème année cycle ingénieur à l'ENSET Mohammedia en ingénierie informatique. Mon parcours commence à la FST Mohammedia (DEUST 2022-2024) et se poursuit avec une ambition claire : concevoir des systèmes qui allient performance, sécurité et intelligence artificielle.",
       paragraph2:
         'Je touche à tout ce qui me fascine : du développement full-stack, des pipelines ML/AI, appliqués en divers domaines principalement la cybersécurité et la finance.',
     },
