@@ -244,7 +244,7 @@ export const experiences = [
 export const education = [
   {
     date: '2024 → 2026',
-    role: 'Cycle Ingénieur : ingenierie informatique ,
+    role: 'Cycle Ingénieur : ingenierie informatique ',
     company: 'ENSET Mohammedia',
     points: [],
   },
