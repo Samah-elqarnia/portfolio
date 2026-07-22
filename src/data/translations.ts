@@ -12,7 +12,7 @@ export const translations = {
     ],
     hero: {
       eyebrow: 'Ingénieure Informatique · Mohammedia, Maroc',
-      tagline: 'Experte en développement web  Full Stack, systémes intelligents et securisées par intégration de l\'IA et des modéles ML ',
+      tagline: 'Experte en développement web Full Stack, systèmes intelligents et robustes par intégration de l\'IA et des modèles ML',
       contact: 'Me contacter ↗',
       github: 'GitHub ↗',
       scrollHint: 'Scroll pour explorer',
@@ -22,9 +22,9 @@ export const translations = {
       title: 'Ingénieure,',
       italic: 'curieuse, construite pour résoudre',
       paragraph1:
-        "Élève ingénieure en 3ème année cycle ingénieur à l'ENSET Mohammedia en ingénierie informatique. Mon parcours commence à la FST Mohammedia (DEUST 2022-2024) et se poursuit avec une ambition claire : concevoir des systèmes qui allient performance, sécurité et intelligence artificielle.",
+        "Élève ingénieure en 3ème année cycle ingénieur à l'ENSET Mohammedia en ingénierie informatique. Mon parcours commence à la FST Mohammedia (DEUST 2022-2024) et se poursuit avec une ambition claire : concevoir des systèmes qui allient performance, résilience et intelligence artificielle.",
       paragraph2:
-        'Je touche à tout ce qui me fascine : du développement full-stack, des pipelines ML/AI, appliqués en divers domaines principalement la cybersécurité et la finance.',
+        'Je touche à tout ce qui me fascine : du développement full-stack, des pipelines ML/AI, appliqués en divers domaines, principalement la finance.',
     },
     skills: {
       label: 'Expertise',
@@ -92,7 +92,7 @@ export const translations = {
     ],
     hero: {
       eyebrow: 'Computer Science Engineer · Mohammedia, Morocco',
-      tagline: 'Full Stack, Cybersecurity and AI specialist building secure, scalable digital products.',
+      tagline: 'Full Stack, Fintech and AI specialist building robust, scalable digital products.',
       contact: 'Contact me ↗',
       github: 'GitHub ↗',
       scrollHint: 'Scroll to explore',
@@ -102,9 +102,9 @@ export const translations = {
       title: 'Engineer,',
       italic: 'curious, built to solve',
       paragraph1:
-        'Second-year engineering student at ENSET Mohammedia, specializing in Computer Science Engineering: Cybersecurity and Digital Trust. My journey began at FST Mohammedia (DEUST 2022-2024) and continues with a clear mission: to design systems that combine performance, security, and artificial intelligence.',
+        'Third-year engineering student at ENSET Mohammedia, specializing in Computer Science Engineering: Fintech and Digital Finance. My journey began at FST Mohammedia (DEUST 2022-2024) and continues with a clear mission: to design systems that combine performance, resilience, and artificial intelligence.',
       paragraph2:
-        'I explore everything that fascinates me: full-stack development, ML/AI pipelines, applied across cybersecurity and finance domains.',
+        'I explore everything that fascinates me: full-stack development, ML/AI pipelines, applied across fintech and finance domains.',
     },
     skills: {
       label: 'Expertise',

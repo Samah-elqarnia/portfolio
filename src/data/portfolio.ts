@@ -6,8 +6,6 @@ import topautoImg from './assets/topauto.png'
 import luxepediaImg from './assets/luxepedia.png'
 import techplaceImg from './assets/techplace.png'
 import securityImg from './assets/website.png'
-import wellnessImg from './assets/wellness.png'
-import mobileImg from './assets/mobile.png'
 import quantImg from './assets/quant.png'
 import newsImg from './assets/newsai.png'
 import FraudImg from './assets/fraud.png'
@@ -26,7 +24,7 @@ import derivatives from './assets/derivatives.png'
 import admin1 from './assets/admin1.png'
 import linux from './assets/linux.png'
 import blockchain from './assets/blockchain.png'
-import eth from './assets/hacking.png'
+// replaced hacking asset (cyber) usages with blockchain/fintech imagery
 import adminforti from './assets/adminforti.png'
 import advancedmcp from './assets/advancedmcp.png'
 import awsfound from './assets/awsfound.png'
@@ -36,8 +34,8 @@ import awssec from './assets/awssec.png'
 
 export const personalInfo = {
   name: 'Samah EL QARNIA',
-  title: 'Software Engineer · Cybersecurity Enthusiast',
-  tagline: 'Développement Full Stack, je bâtis des systèmes scalables et performants, propulsés par l intégration native de l Intelligence Artificielle et du Machine Learning.Ma force réside dans la fusion de l innovation et de la résilience : chaque solution est développée selon le paradigme du Security by Design, garantissant des produits numériques élégants, durablement protégés et capables de transformer des données complexes en leviers de croissance intelligents.',
+  title: 'Software Engineer · Fintech Enthusiast',
+  tagline: 'Développement Full Stack, je bâtis des systèmes scalables et performants, propulsés par l\'intégration native de l Intelligence Artificielle et du Machine Learning. Ma force réside dans la fusion de l\'innovation et de la résilience : chaque solution est développée selon le paradigme de Resilience by Design, garantissant des produits numériques élégants, robustes et capables de transformer des données complexes en leviers de croissance intelligents.',
   location: 'Mohammedia, Maroc',
   email: 'elqarniasamah@gmail.com',
   phone: '+212 770 619 376',
@@ -74,9 +72,9 @@ export const skills = [
   },
   {
     icon: '◇',
-    title: 'Cybersécurité',
-    desc: 'basic pentest web & réseau, analyse de vulnérabilités et sécurité des systèmes.',
-    tags: ['Kali Linux', 'CCNA', 'Bash', 'SSL/TLS'],
+    title: 'Fintech & Conformité',
+    desc: 'Paiements, conformité, détection de fraude et gestion des risques financiers.',
+    tags: ['Stripe', 'Plaid', 'Risk Modeling', 'Fraud Detection'],
   },
   {
     icon: '◻',
@@ -187,33 +185,13 @@ export const projects: Project[] = [
   },
   {
     id: 'security-scanner',
-    name: 'Website Security Scanner',
-    subtitle: 'Détection de Vulnérabilités',
-    desc: 'Analyse automatique de sites web à partir d\'une URL : ports ouverts, technologies, config HTTP/HTTPS, certificats SSL etc... Génère un rapport PDF synthétique téléchargeable.',
-    tags: ['Bash', 'React.js', 'Express.js', 'Node.js', 'PDF Generation'],
-    category: 'Cybersécurité',
+    name: 'Website Health Scanner',
+    subtitle: 'Monitoring & Diagnostics',
+    desc: 'Analyse automatique de sites web à partir d\'une URL : disponibilité, temps de réponse, configuration HTTP/HTTPS, certificats et performances. Génère un rapport PDF synthétique téléchargeable.',
+    tags: ['Bash', 'React.js', 'Express.js', 'Node.js', 'PDF Generation', 'Monitoring'],
+    category: 'Web',
     github: 'https://github.com/Samah-elqarnia',
     image: securityImg,
-  },
-  {
-    id: 'mental-wellness',
-    name: 'Mental Wellness',
-    subtitle: 'Application Desktop',
-    desc: 'Application desktop dédiée au bien-être mental. Suivi de l\'humeur, ressources personnalisées et outils d\'accompagnement pour une santé mentale au quotidien.',
-    tags: ['JavaFX', 'Java', 'MySQL'],
-    category: 'Desktop',
-    github: 'https://github.com/Samah-elqarnia',
-    image: wellnessImg,
-  },
-  {
-    id: 'animal-mobile',
-    name: 'application mobile pour gestion des animaux',
-    subtitle: 'Application mobile',
-    desc: 'Application mobile dédiée aux associations pour assurer le suivi centralisé, la gestion de santé et l\'automatisation des fiches d\'adoption des animaux.',
-    tags: ['React native', 'Node.js', 'Express.js', 'MongoDB'],
-    category: 'Mobile',
-    github: 'https://github.com/Samah-elqarnia',
-    image: mobileImg,
   }
 ]
 
@@ -280,7 +258,7 @@ export const certifications = [
   { name: 'introduction to mongodb', org: 'MongoDB', image: mongodb },
   { name: 'fortiOS administrator', org: 'fortinet', image: adminforti },
   { name: 'Blockchain fundamentals', org: 'fortinet', image: blockchain },
-  { name: 'Ethical Hacker', org: 'Cisco Network Academy', image: eth },
+  { name: 'Smart Contract Development', org: 'Online Course', image: blockchain },
   { name: 'Linux Unhatched & Essentials', org: 'Cisco Network Academy', image: linux },
   { name: 'CCNA', org: 'Cisco Network Academy', image: ccna },
   { name: 'System Administration 1', org: 'Red Hat Academy', image: admin1 },

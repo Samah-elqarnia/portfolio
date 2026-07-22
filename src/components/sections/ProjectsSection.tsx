@@ -10,7 +10,7 @@ const categoryEmoji: Record<string, string> = {
   'IA · RAG': '🤖',
   'Web · Firebase': '🚗',
   'E-commerce · MERN': '🛒',
-  'Cybersécurité': '🔐',
+  'Fintech': '💳',
   'Desktop · Java': '🧠',
 }
 
