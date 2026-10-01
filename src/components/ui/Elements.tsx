@@ -6,11 +6,11 @@ export function Badge({ children, className }: { children: React.ReactNode; clas
     <span
       className={cn(
         'inline-flex items-center text-[11px] tracking-[1.5px] uppercase',
-        'px-4 py-1.5 rounded-full border text-rose-light',
+        'px-4 py-1.5 rounded-full border text-mustard-light',
         className
       )}
       style={{
-        background: 'rgba(75,0,130,0.12)',
+        background: 'rgba(255, 255, 255, 0.12)',
         borderColor: 'rgba(75,0,130,0.35)',
       }}
     >
@@ -24,10 +24,10 @@ export function Tag({ children }: { children: React.ReactNode }) {
   return (
     <span
       className="inline-flex items-center text-[10px] tracking-[1px] uppercase
-                 px-2.5 py-1 rounded-full text-rose-light"
+                 px-2.5 py-1 rounded-full text-mustard-light"
       style={{
-        background: 'rgba(192,128,129,0.1)',
-        border: '0.5px solid rgba(192,128,129,0.25)',
+        background: 'rgba(212,160,23,0.1)',
+        border: '0.5px solid rgba(212,160,23,0.25)',
       }}
     >
       {children}
@@ -47,10 +47,10 @@ export function SectionHeader({
 }) {
   return (
     <div className="mb-12">
-      <p className="text-[11px] tracking-[3px] uppercase text-rose mb-3">{label}</p>
-      <h2 className="font-serif text-[clamp(28px,4vw,42px)] font-normal text-cream leading-tight">
+      <p className="text-[11px] tracking-[3px] uppercase text-mustard mb-3">{label}</p>
+      <h2 className="font-serif text-[clamp(28px,4vw,42px)] font-normal text-black leading-tight">
         {title}{' '}
-        {italic && <em className="italic text-rose-light">{italic}</em>}
+        {italic && <em className="italic text-mustard-light">{italic}</em>}
       </h2>
     </div>
   )
@@ -75,8 +75,8 @@ export function ButtonPrimary({
       target={target}
       rel={target === '_blank' ? 'noopener noreferrer' : undefined}
       className="inline-flex items-center gap-2 text-[12px] tracking-[2px] uppercase
-                 font-semibold px-8 py-3.5 rounded-full bg-rose text-black
-                 hover:bg-rose-light transition-all duration-200
+                 font-semibold px-8 py-3.5 rounded-full bg-mustard text-white
+                 hover:bg-mustard-light transition-all duration-200
                  hover:-translate-y-0.5"
     >
       {children}
@@ -103,9 +103,9 @@ export function ButtonOutline({
       target={target}
       rel={target === '_blank' ? 'noopener noreferrer' : undefined}
       className="inline-flex items-center gap-2 text-[12px] tracking-[2px] uppercase
-                 font-medium px-8 py-3.5 rounded-full text-rose
-                 hover:bg-[rgba(192,128,129,0.08)] transition-all duration-200"
-      style={{ border: '0.5px solid #C08081' }}
+                 font-medium px-8 py-3.5 rounded-full text-mustard
+                 hover:bg-[rgba(212,160,23,0.08)] transition-all duration-200"
+      style={{ border: '0.5px solid #D4A017' }}
     >
       {children}
     </a>
@@ -132,8 +132,8 @@ export function Card({
         className
       )}
       style={{
-        background: '#141414',
-        border: '0.5px solid rgba(192,128,129,0.18)',
+        background: '#FAF8F5',
+        border: '0.5px solid rgba(212,160,23,0.18)',
         ...style,
       }}
     >

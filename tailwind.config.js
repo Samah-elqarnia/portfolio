@@ -8,25 +8,32 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // ── Midnight Orchid Palette ──────────────────────────────
-        black:        '#0A0A0A',
-        surface:      '#141414',
-        surface2:     '#1E1E2A',
-        mauve: {
-          DEFAULT:    '#4B0082',
-          light:      '#6A1FA8',
-          deep:       '#2D0050',
+        // ── Honey & Cream Palette ────────────────────────────────
+        white:        '#FFFFFF',
+        cream:        '#FAF8F5',
+        beige:        '#F5EFE7',
+        surface:      '#F8F3EE',
+        surface2:     '#F2E9E1',
+        mustard: {
+          DEFAULT:    '#D4A017',
+          light:      '#E3B448',
+          dark:       '#B8860B',
+        },
+        warm: {
+          DEFAULT:    '#D9A566',
+          light:      '#E8C4A0',
+          pale:       '#F5E8D8',
+          muted:      '#C89850',
         },
         rose: {
           DEFAULT:    '#C08081',
-          light:      '#D4A0A0',
-          pale:       '#F5E6E6',
-          muted:      '#A06060',
+          light:      '#D6A7A8',
+          pale:       '#EAD8D8',
         },
-        cream: {
-          DEFAULT:    '#F5F5F5',
-          dim:        '#E0D8D8',
-          faint:      '#B0A8A8',
+        black: {
+          DEFAULT:    '#1A1A1A',
+          light:      '#4A4A4A',
+          pale:       '#707070',
         },
       },
       fontFamily: {
@@ -37,13 +44,14 @@ module.exports = {
         '10': '10px',
         '11': '11px',
       },
+
       letterSpacing: {
         widest2: '0.2em',
         widest3: '0.3em',
       },
       borderColor: {
-        rose:  'rgba(192,128,129,0.2)',
-        mauve: 'rgba(75,0,130,0.35)',
+        mustard: 'rgba(212,160,23,0.25)',
+        warm:    'rgba(217,165,102,0.2)',
       },
       animation: {
         'fade-up':    'fadeUp 0.7s ease forwards',
@@ -71,10 +79,10 @@ module.exports = {
         },
       },
       backgroundImage: {
-        'mauve-glow':
-          'radial-gradient(ellipse 60% 40% at 50% 0%, rgba(75,0,130,0.15) 0%, transparent 70%)',
-        'rose-glow':
-          'radial-gradient(ellipse 40% 30% at 80% 50%, rgba(192,128,129,0.08) 0%, transparent 60%)',
+        'mustard-glow':
+          'radial-gradient(ellipse 60% 40% at 50% 0%, rgba(212,160,23,0.08) 0%, transparent 70%)',
+        'warm-glow':
+          'radial-gradient(ellipse 40% 30% at 80% 50%, rgba(217,165,102,0.06) 0%, transparent 60%)',
       },
     },
   },

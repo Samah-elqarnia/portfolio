@@ -7,30 +7,27 @@ import ExperienceSection from '@/components/sections/ExperienceSection'
 import CertificationsSection from '@/components/sections/CertificationsSection'
 import ContactSection from '@/components/sections/ContactSection'
 import Footer from '@/components/ui/Footer'
-import { LanguageProvider } from '@/context/LanguageContext'
 
 export default function Home() {
   return (
-    <main className="bg-black min-h-screen">
-      <LanguageProvider>
-        <Navbar />
-        <HeroSection />
-        <div className="max-w-[1400px] mx-auto px-[8%]">
-          <SectionDivider />
-          <AboutSection />
-          <SectionDivider />
-          <SkillsSection />
-          <SectionDivider />
-          <ProjectsSection />
-          <SectionDivider />
-          <ExperienceSection />
-          <SectionDivider />
-          <CertificationsSection />
-          <SectionDivider />
-          <ContactSection />
-        </div>
-        <Footer />
-      </LanguageProvider>
+    <main className="bg-cream min-h-screen text-black">
+      <Navbar />
+      <HeroSection />
+      <div className="max-w-[1400px] mx-auto px-[8%]">
+        <SectionDivider />
+        <AboutSection />
+        <SectionDivider />
+        <SkillsSection />
+        <SectionDivider />
+        <ProjectsSection />
+        <SectionDivider />
+        <ExperienceSection />
+        <SectionDivider />
+        <CertificationsSection />
+        <SectionDivider />
+        <ContactSection />
+      </div>
+      <Footer />
     </main>
   )
 }
@@ -39,7 +36,7 @@ function SectionDivider() {
   return (
     <hr
       className="border-none"
-      style={{ borderTop: '0.5px solid rgba(192,128,129,0.15)' }}
+      style={{ borderTop: '0.5px solid rgba(212,160,23,0.18)' }}
     />
   )
 }

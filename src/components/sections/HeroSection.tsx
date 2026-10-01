@@ -1,13 +1,12 @@
 'use client'
 
-import { useLanguage } from '@/context/LanguageContext'
+import { translations } from '@/data/translations'
 import { personalInfo } from '@/data/portfolio'
 import { ButtonPrimary, ButtonOutline } from '@/components/ui/Elements'
 import Image from 'next/image'
-import samahPhoto from '@/data/assets/samahphoto.png'
+import samahPhoto from '@/data/assets/samah1.jpg'
 
 export default function HeroSection() {
-  const { t } = useLanguage()
 
   return (
     <section
@@ -20,14 +19,14 @@ export default function HeroSection() {
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
           background:
-            'radial-gradient(ellipse 60% 40% at 50% 0%, rgba(75,0,130,0.15) 0%, transparent 70%)',
+            'radial-gradient(ellipse 60% 40% at 50% 0%, rgba(212,160,23,0.10) 0%, transparent 70%)',
         }}
       />
       <div
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
           background:
-            'radial-gradient(ellipse 40% 30% at 80% 50%, rgba(192,128,129,0.06) 0%, transparent 60%)',
+            'radial-gradient(ellipse 40% 30% at 80% 50%, rgba(217,165,102,0.08) 0%, transparent 60%)',
         }}
       />
 
@@ -37,10 +36,10 @@ export default function HeroSection() {
         <div className="flex-1 w-full">
           {/* Eyebrow */}
           <p
-            className="text-[11px] tracking-[4px] uppercase text-rose mb-6
+            className="text-[15px] tracking-[4px] uppercase text-mustard mb-6
                        animate-fade-up text-center lg:text-left"
           >
-            {t.hero.eyebrow}
+            {translations.hero.eyebrow}
           </p>
 
           {/* Name */}
@@ -48,19 +47,19 @@ export default function HeroSection() {
             className="font-serif leading-none animate-fade-up delay-100 text-center lg:text-left"
             style={{ fontSize: 'clamp(48px, 9vw, 100px)', opacity: 0 }}
           >
-            <span className="text-cream">Samah</span>
+            <span className="text-black">Samah</span>
             <br />
-            <span className="text-rose-light italic">EL QARNIA</span>
+            <span className="text-mustard-light italic">EL QARNIA</span>
           </h1>
 
           {/* Tagline */}
           <p
-            className="text-cream-dim text-[clamp(14px,1.8vw,18px)] font-light
+            className="text-black-light text-[clamp(14px,1.8vw,18px)] font-light
                        mt-6 lg:mb-10 mb-4 max-w-xl leading-relaxed tracking-wide
                        animate-fade-up delay-200 mx-auto lg:mx-0 text-center lg:text-left"
             style={{ opacity: 0 }}
           >
-            {t.hero.tagline}
+            {translations.hero.tagline}
           </p>
 
           {/* CTAs */}
@@ -69,10 +68,10 @@ export default function HeroSection() {
             style={{ opacity: 0 }}
           >
             <ButtonPrimary href={`mailto:${personalInfo.email}`}>
-              {t.hero.contact}
+              {translations.hero.contact}
             </ButtonPrimary>
             <ButtonOutline href={personalInfo.github} target="_blank">
-              {t.hero.github}
+              {translations.hero.github}
             </ButtonOutline>
           </div>
         </div>
@@ -82,7 +81,7 @@ export default function HeroSection() {
           className="flex-1 flex justify-center lg:justify-end w-full animate-fade-up delay-300"
           style={{ opacity: 0 }}
         >
-          <div className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden border-[0.5px] border-rose/30 shadow-[0_0_60px_rgba(192,128,129,0.15)]">
+          <div className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden border-[0.5px] border-mustard/30 shadow-[0_0_60px_rgba(212,160,23,0.15)]">
             <Image
               src={samahPhoto}
               alt={personalInfo.name}
@@ -98,9 +97,9 @@ export default function HeroSection() {
 
       {/* Scroll hint */}
       <div className="mt-16 flex items-center gap-3 animate-fade-up delay-600 justify-center lg:justify-start" style={{ opacity: 0 }}>
-        <div className="w-8 h-px" style={{ background: 'rgba(245,245,245,0.15)' }} />
-        <span className="text-[11px] tracking-[2px] uppercase text-cream/25">
-          {t.hero.scrollHint}
+        <div className="w-8 h-px" style={{ background: 'rgba(26,26,26,0.15)' }} />
+        <span className="text-[11px] tracking-[2px] uppercase text-black/25">
+          {translations.hero.scrollHint}
         </span>
       </div>
     </section>

@@ -5,7 +5,7 @@ import emailjs from '@emailjs/browser'
 import { useScrollReveal } from '@/hooks/useScrollReveal'
 import { SectionHeader } from '@/components/ui/Elements'
 import { personalInfo } from '@/data/portfolio'
-import { useLanguage } from '@/context/LanguageContext'
+import { translations } from '@/data/translations'
 
 // ── Social link pill ──────────────────────────────────────────
 function ContactPill({
@@ -24,9 +24,9 @@ function ContactPill({
       href={href}
       target={target}
       rel={target === '_blank' ? 'noopener noreferrer' : undefined}
-      className="inline-flex items-center gap-2 text-[13px] text-cream-dim
+      className="inline-flex items-center gap-2 text-[13px] text-black-light
                  px-6 py-3 rounded-full transition-all duration-200
-                 hover:text-rose"
+                 hover:text-mustard"
       style={{
         background: '#1E1E2A',
         border: '0.5px solid rgba(192,128,129,0.18)',
@@ -53,8 +53,6 @@ function ContactForm() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  const { t } = useLanguage()
-
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     setStatus('sending')
@@ -68,21 +66,21 @@ function ContactForm() {
 
     try {
       await emailjs.send("portfolio", "template_3okrkub", templateParams)
-      alert(t.contact.alertSuccess)
+      alert(translations.contact.alertSuccess)
       setForm({ name: '', email: '', message: '' })
       setStatus('done')
     } catch (err) {
       console.error(err)
-      alert(t.contact.alertError)
+      alert(translations.contact.alertError)
       setStatus('idle')
     }
   }
 
   const inputStyle: React.CSSProperties = {
-    background: '#141414',
-    border: '0.5px solid rgba(192,128,129,0.2)',
+    background: '#FAF8F5',
+    border: '0.5px solid rgba(212,160,23,0.2)',
     borderRadius: '10px',
-    color: '#F5F5F5',
+    color: '#1A1A1A',
     fontSize: '14px',
     padding: '12px 16px',
     outline: 'none',
@@ -95,67 +93,67 @@ function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-4 mt-10">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="text-[11px] tracking-[2px] uppercase text-cream/40 block mb-2">
-            {t.contact.name}
+          <label className="text-[11px] tracking-[2px] uppercase text-black/40 block mb-2">
+            {translations.contact.name}
           </label>
           <input
             id="nom"
             name="name"
             type="text"
             required
-            placeholder={t.contact.placeholderName}
+            placeholder={translations.contact.placeholderName}
             value={form.name}
             onChange={handleChange}
             style={inputStyle}
             onFocus={(e) =>
-              (e.target.style.borderColor = 'rgba(192,128,129,0.5)')
+              (e.target.style.borderColor = 'rgba(212,160,23,0.5)')
             }
             onBlur={(e) =>
-              (e.target.style.borderColor = 'rgba(192,128,129,0.2)')
+              (e.target.style.borderColor = 'rgba(212,160,23,0.2)')
             }
           />
         </div>
         <div>
-          <label className="text-[11px] tracking-[2px] uppercase text-cream/40 block mb-2">
-            {t.contact.email}
+          <label className="text-[11px] tracking-[2px] uppercase text-black/40 block mb-2">
+            {translations.contact.email}
           </label>
           <input
             id="email"
             name="email"
             type="email"
             required
-            placeholder={t.contact.placeholderEmail}
+            placeholder={translations.contact.placeholderEmail}
             value={form.email}
             onChange={handleChange}
             style={inputStyle}
             onFocus={(e) =>
-              (e.target.style.borderColor = 'rgba(192,128,129,0.5)')
+              (e.target.style.borderColor = 'rgba(212,160,23,0.5)')
             }
             onBlur={(e) =>
-              (e.target.style.borderColor = 'rgba(192,128,129,0.2)')
+              (e.target.style.borderColor = 'rgba(212,160,23,0.2)')
             }
           />
         </div>
       </div>
 
       <div>
-        <label className="text-[11px] tracking-[2px] uppercase text-cream/40 block mb-2">
-          {t.contact.message}
+        <label className="text-[11px] tracking-[2px] uppercase text-black/40 block mb-2">
+          {translations.contact.message}
         </label>
         <textarea
           id="message"
           name="message"
           required
           rows={5}
-          placeholder={t.contact.placeholderMessage}
+          placeholder={translations.contact.placeholderMessage}
           value={form.message}
           onChange={handleChange}
           style={{ ...inputStyle, resize: 'vertical' }}
           onFocus={(e) =>
-            (e.target.style.borderColor = 'rgba(192,128,129,0.5)')
+            (e.target.style.borderColor = 'rgba(212,160,23,0.5)')
           }
           onBlur={(e) =>
-            (e.target.style.borderColor = 'rgba(192,128,129,0.2)')
+            (e.target.style.borderColor = 'rgba(212,160,23,0.2)')
           }
         />
       </div>
@@ -168,20 +166,20 @@ function ContactForm() {
                    uppercase font-semibold transition-all duration-200
                    disabled:opacity-60"
         style={{
-          background: status === 'done' ? '#3B6D11' : '#C08081',
-          color: status === 'done' ? '#EAF3DE' : '#0A0A0A',
+          background: status === 'done' ? '#6B8E23' : '#D4A017',
+          color: status === 'done' ? '#FFFFFF' : '#FFFFFF',
         }}
       >
-        {status === 'idle' && t.contact.submit}
-        {status === 'sending' && t.contact.sending}
-        {status === 'done' && t.contact.sent}
+        {status === 'idle' && translations.contact.submit}
+        {status === 'sending' && translations.contact.sending}
+        {status === 'done' && translations.contact.sent}
       </button>
 
-      <p className="text-[11px] text-cream/20 text-center">
-        {t.contact.emailHint}{' '}
+      <p className="text-[11px] text-black/20 text-center">
+        {translations.contact.emailHint}{' '}
         <a
           href={`mailto:${personalInfo.email}`}
-          className="text-rose/60 hover:text-rose transition-colors"
+          className="text-mustard/60 hover:text-mustard transition-colors"
         >
           {personalInfo.email}
         </a>
@@ -193,7 +191,6 @@ function ContactForm() {
 // ── Main Section ──────────────────────────────────────────────
 export default function ContactSection() {
   const { ref, isVisible } = useScrollReveal()
-  const { t } = useLanguage()
 
   return (
     <section id="contact" className="py-24">
@@ -210,19 +207,19 @@ export default function ContactSection() {
           }}
         >
           <SectionHeader
-            label={t.contact.label}
-            title={t.contact.title}
-            italic={t.contact.italic}
+            label={translations.contact.label}
+            title={translations.contact.title}
+            italic={translations.contact.italic}
           />
-          <p className="text-cream-dim text-[15px] leading-relaxed mb-8">
-            {t.contact.intro}
+          <p className="text-black-light text-[15px] leading-relaxed mb-8">
+            {translations.contact.intro}
           </p>
 
           {/* Email */}
           <a
             href={`mailto:${personalInfo.email}`}
-            className="font-serif text-[clamp(14px,2.2vw,22px)] text-rose-light
-                       block mb-8 hover:text-cream transition-colors duration-200"
+            className="font-serif text-[clamp(14px,2.2vw,22px)] text-mustard-light
+                       block mb-8 hover:text-black transition-colors duration-200"
           >
             {personalInfo.email}
           </a>
@@ -270,8 +267,8 @@ export default function ContactSection() {
             transitionDelay: '200ms',
           }}
         >
-          <p className="text-[11px] tracking-[3px] uppercase text-cream/30 mb-6">
-            {t.contact.label}
+          <p className="text-[11px] tracking-[3px] uppercase text-black/30 mb-6">
+            {translations.contact.label}
           </p>
           {/* Note: Replace with Formspree or Resend for production email delivery */}
           <ContactForm />

@@ -3,11 +3,10 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal'
 import { SectionHeader } from '@/components/ui/Elements'
 import { stats } from '@/data/portfolio'
-import { useLanguage } from '@/context/LanguageContext'
+import { translations } from '@/data/translations'
 
 export default function AboutSection() {
   const { ref, isVisible } = useScrollReveal()
-  const { t } = useLanguage()
 
   return (
     <section
@@ -24,15 +23,15 @@ export default function AboutSection() {
         }}
       >
         <SectionHeader
-          label={t.about.label}
-          title={t.about.title}
-          italic={t.about.italic}
+          label={translations.about.label}
+          title={translations.about.title}
+          italic={translations.about.italic}
         />
-        <p className="text-cream-dim text-[15px] leading-[1.9] mb-4">
-          {t.about.paragraph1}
+        <p className="text-black-light text-[15px] leading-[1.9] mb-4">
+          {translations.about.paragraph1}
         </p>
-        <p className="text-cream-dim text-[15px] leading-[1.9] mb-8">
-          {t.about.paragraph2}
+        <p className="text-black-light text-[15px] leading-[1.9] mb-8">
+          {translations.about.paragraph2}
         </p>
       </div>
 
@@ -50,14 +49,14 @@ export default function AboutSection() {
             key={s.label}
             className="rounded-xl p-5"
             style={{
-              background: '#1E1E2A',
-              border: '0.5px solid rgba(192,128,129,0.15)',
+              background: '#F5EFE7',
+              border: '0.5px solid rgba(212,160,23,0.15)',
             }}
           >
-            <p className="font-serif text-[36px] text-rose-light leading-none mb-1">
+            <p className="font-serif text-[36px] text-mustard-light leading-none mb-1">
               {s.num}
             </p>
-            <p className="text-[11px] tracking-[1.5px] uppercase text-cream/40">
+            <p className="text-[11px] tracking-[1.5px] uppercase text-black/40">
               {s.label}
             </p>
           </div>

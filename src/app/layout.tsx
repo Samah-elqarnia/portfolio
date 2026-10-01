@@ -1,12 +1,11 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
-import { LanguageProvider } from '@/context/LanguageContext'
 import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Samah EL QARNIA — Software Engineer & Fintech',
   description:
-    'Portfolio de Samah EL QARNIA — Ingénieure en informatique orientée Fintech, développement Full Stack et Intelligence Artificielle. ENSET Mohammedia.',
+    'Portfolio of Samah EL QARNIA — Computer Science Engineer specializing in Fintech, Full Stack Development and Artificial Intelligence. ENSET Mohammedia.',
   keywords: [
     'Samah EL QARNIA',
     'Software Engineer',
@@ -16,12 +15,12 @@ export const metadata: Metadata = {
     'FastAPI',
     'LangChain',
     'ENSET Mohammedia',
-    'Maroc',
+    'Morocco',
   ],
   authors: [{ name: 'Samah EL QARNIA', url: 'https://github.com/Samah-elqarnia' }],
   openGraph: {
     title: 'Samah EL QARNIA — Software Engineer',
-    description: 'Ingénieure informatique — Fintech · Full Stack · IA',
+    description: 'Computer Science Engineer — Fintech · Full Stack · AI',
     type: 'website',
   },
 }
@@ -32,10 +31,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fr" className="grain-overlay">
+    <html lang="en" className="grain-overlay">
       <body>
         <Script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" />
-        <LanguageProvider>{children}</LanguageProvider>
+        {children}
       </body>
     </html>
   )

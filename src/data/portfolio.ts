@@ -23,8 +23,6 @@ import analysis from './assets/analysis.png'
 import derivatives from './assets/derivatives.png'
 import admin1 from './assets/admin1.png'
 import linux from './assets/linux.png'
-import blockchain from './assets/blockchain.png'
-// replaced hacking asset (cyber) usages with blockchain/fintech imagery
 import adminforti from './assets/adminforti.png'
 import advancedmcp from './assets/advancedmcp.png'
 import awsfound from './assets/awsfound.png'
@@ -34,30 +32,40 @@ import awssec from './assets/awssec.png'
 
 export const personalInfo = {
   name: 'Samah EL QARNIA',
-  title: 'Software Engineer · Fintech Enthusiast',
-  tagline: 'Développement Full Stack, je bâtis des systèmes scalables et performants, propulsés par l\'intégration native de l Intelligence Artificielle et du Machine Learning. Ma force réside dans la fusion de l\'innovation et de la résilience : chaque solution est développée selon le paradigme de Resilience by Design, garantissant des produits numériques élégants, robustes et capables de transformer des données complexes en leviers de croissance intelligents.',
-  location: 'Mohammedia, Maroc',
+  title: 'AI Engineer & data scientist ',
+  tagline: 'Ingénieure logiciel et IA passionnée par la création de systèmes intelligents et résilients. J\'intègre l\'IA et le ML nativement dans des architectures Full Stack pour construire des produits numériques performants qui résolvent des problèmes complexes.',
+  location: 'Maroc',
   email: 'elqarniasamah@gmail.com',
   phone: '+212 770 619 376',
   github: 'https://github.com/Samah-elqarnia',
   linkedin: 'https://www.linkedin.com/in/samah-el-qarnia-676811354',
-  cvUrl: 'src\\data\\resume-samah-1.pdf',   // Place your CV PDF in /public
   languages: [
-    { lang: 'Anglais', level: 'C1', flag: '🇬🇧' },
+    { lang: 'Anglais', level: 'C2', flag: '🇬🇧' },
     { lang: 'Français', level: 'B2', flag: '🇫🇷' },
     { lang: 'Arabe', level: 'Natif', flag: '🇲🇦' },
   ],
 }
 
 export const stats = [
-  { num: '3+', label: 'Années de dev' },
-  { num: '6', label: 'Projets majeurs' },
+  { num: '4+', label: 'Years in Tech' },
+  { num: '6', label: 'Big projects'},
   { num: '10+', label: 'Certifications' },
-  { num: '3', label: "Domaines d'expertise" },
 ]
 
 // ── Skills ────────────────────────────────────────────────────
 export const skills = [
+  {
+    icon: '◉',
+    title: 'Langages de Programmation',
+    desc: 'Solide base algorithmique et orientée objet, des systèmes embarqués au web.',
+    tags: ['Python', 'Java', 'C', 'Design Patterns', 'POO'],
+  },
+  {
+    icon: '○',
+    title: 'Cloud & Virtualisation',
+    desc: 'Infrastructure, versioning , design et gestion de projets techniques.',
+    tags: ['Git', 'GitHub', 'AWS', 'Linux', 'Docker'],
+  },
   {
     icon: '⬡',
     title: 'Développement Web Full-stack',
@@ -67,12 +75,12 @@ export const skills = [
   {
     icon: '◈',
     title: 'Intelligence Artificielle',
-    desc: 'Pipelines RAG, agents LLM, automatisation intelligente et intégration de l\'IA dans des systèmes réels.',
-    tags: ['LangChain', 'RAG', 'scikit-learn', 'LLMs', 'n8n', 'Qdrant'],
+    desc: 'Pipelines RAG, agents LLM et intégration de l\'IA dans des systèmes réels.',
+    tags: ['LangChain', 'RAG', 'LangGraph', 'LLMs', 'Qdrant', 'MCP'],
   },
   {
     icon: '◇',
-    title: 'Fintech & Conformité',
+    title: 'Data Science',
     desc: 'Paiements, conformité, détection de fraude et gestion des risques financiers.',
     tags: ['Stripe', 'Plaid', 'Risk Modeling', 'Fraud Detection'],
   },
@@ -81,19 +89,7 @@ export const skills = [
     title: 'Finance Quantitative',
     desc: 'Modélisation financière, pricing d\'options, optimisation de portefeuille et backtesting.',
     tags: ['Black-Scholes', 'Delta Hedging', 'Greeks', 'NumPy', 'Pandas', 'Matplotlib', 'backtrader'],
-  },
-  {
-    icon: '◉',
-    title: 'Langages de Programmation',
-    desc: 'Solide base algorithmique et orientée objet, des systèmes embarqués au web.',
-    tags: ['Python', 'JavaScript', 'Java', 'C', 'Design Patterns', 'POO'],
-  },
-  {
-    icon: '○',
-    title: 'Outils & Cloud',
-    desc: 'Infrastructure, versioning , design et gestion de projets techniques.',
-    tags: ['Git', 'GitHub', 'AWS', 'Linux', 'Figma', 'Cloudinary', 'Stripe', 'Clerk', 'Inngest'],
-  },
+  }
 ]
 
 // ── Projects ──────────────────────────────────────────────────
@@ -163,36 +159,6 @@ export const projects: Project[] = [
     github: 'https://github.com/Samah-elqarnia',
     image: FraudImg,
   },
-  {
-    id: 'luxepedia',
-    name: 'Luxepedia',
-    subtitle: 'site web E-commerce',
-    desc: 'Site e-commerce haut de gamme inspiré des magazines de mode, offrant une vitrine raffinée et une gestion dynamique des collections en temps réel en utilisant MERN stack ',
-    tags: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'multer'],
-    category: 'Web',
-    github: 'https://github.com/Samah-elqarnia',
-    image: luxepediaImg,
-  },
-  {
-    id: 'techplace',
-    name: 'TechPlace',
-    subtitle: 'site web E-commerce',
-    desc: 'Marketplace tech full-stack avec gestion des produits, panier, commandes et tableau de bord administrateur.Paiement Stripe, authentification Clerk, gestion des médias Cloudinary et jobs asynchrones avec Inngest.',
-    tags: ['Next.js', 'Node.js', 'Express.js', 'MongoDB', 'Stripe', 'Clerk', 'Inngest', 'Cloudinary'],
-    category: 'Web',
-    github: 'https://github.com/Samah-elqarnia',
-    image: techplaceImg,
-  },
-  {
-    id: 'security-scanner',
-    name: 'Website Health Scanner',
-    subtitle: 'Monitoring & Diagnostics',
-    desc: 'Analyse automatique de sites web à partir d\'une URL : disponibilité, temps de réponse, configuration HTTP/HTTPS, certificats et performances. Génère un rapport PDF synthétique téléchargeable.',
-    tags: ['Bash', 'React.js', 'Express.js', 'Node.js', 'PDF Generation', 'Monitoring'],
-    category: 'Web',
-    github: 'https://github.com/Samah-elqarnia',
-    image: securityImg,
-  }
 ]
 
 // ── Experience ────────────────────────────────────────────────
@@ -246,7 +212,6 @@ export const certifications = [
   { name: 'AWS foundations ', org: 'AWS', image: awsfound },
   { name: 'Python Essentials 1', org: 'Cisco Network Academy', image: python1 },
   { name: 'Python Essentials 2', org: 'Cisco Network Academy', image: python2 },
-  { name: 'AWS cloud practitioner essentials', org: 'AWS', image: aws },
   { name: 'AI fundamentals with IBM', org: 'cisco network academy', image: AI },
   { name: 'MCP : Advanced topics', org: 'Anthropic', image: advancedmcp },
   { name: 'Introduction to MCP', org: 'Anthropic', image: mcp },
@@ -254,15 +219,10 @@ export const certifications = [
   { name: 'machine learning', org: '325 Financial Analyst', image: ml },
   { name: 'Derivatives', org: '325 Financial Analyst', image: derivatives },
   { name: 'Technical Analysis', org: '325 Financial Analyst', image: analysis },
-  { name: 'introduction to python', org: '325 Financial Analyst', image: python },
   { name: 'introduction to mongodb', org: 'MongoDB', image: mongodb },
-  { name: 'fortiOS administrator', org: 'fortinet', image: adminforti },
-  { name: 'Blockchain fundamentals', org: 'fortinet', image: blockchain },
-  { name: 'Smart Contract Development', org: 'Online Course', image: blockchain },
   { name: 'Linux Unhatched & Essentials', org: 'Cisco Network Academy', image: linux },
   { name: 'CCNA', org: 'Cisco Network Academy', image: ccna },
   { name: 'System Administration 1', org: 'Red Hat Academy', image: admin1 },
-  { name: 'System Administration 2', org: 'Red Hat Academy', image: '/certificates/sysadmin2.jpg' },
 
 ]
 
