@@ -23,8 +23,8 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       className="flex flex-col rounded-2xl overflow-hidden transition-all duration-700
                  hover:-translate-y-1"
       style={{
-        background: '#141414',
-        border: '0.5px solid rgba(192,128,129,0.18)',
+        background: '#FFFFFF',
+        border: '0.5px solid rgba(212,160,23,0.18)',
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? 'translateY(0)' : 'translateY(32px)',
         transitionDelay: `${index * 80}ms`,

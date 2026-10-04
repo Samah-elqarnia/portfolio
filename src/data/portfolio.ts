@@ -57,8 +57,8 @@ export const skills = [
   {
     icon: '◉',
     title: 'Langages de Programmation',
-    desc: 'Solide base algorithmique et orientée objet ',
-    tags: ['Python', 'Java', 'C', 'SQL','POO'],
+    desc: 'Solide base algorithmique et orientée objet',
+    tags: ['Python', 'Java', 'C', 'SQL', 'POO'],
   },
   {
     icon: '◇',
@@ -77,20 +77,19 @@ export const skills = [
     title: 'Finance Quantitative',
     desc: 'Modélisation quantitative des actifs financiers, optimisation de portefeuille et backtesting de stratégies',
     tags: ['pricing', 'Monte Carlo', 'Factor Models', 'Modern Portfolio Theory', 'Backtesting'],
-  }
-  
-  ,{
+  },
+  {
     icon: '○',
     title: 'Cloud & Virtualisation',
-    desc: 'versioning et déploiement d\'applications web et de modèles ML/IA.',
+    desc: 'Versioning et déploiement d\'applications web et de modèles ML/IA.',
     tags: ['Git', 'GitHub', 'AWS', 'Linux', 'Docker'],
   },
   {
     icon: '⬡',
-    title: ' Développement web ',
-    desc: 'de l\'analyse des besoins au déploiement. APIs robustes, UX soignée.',
+    title: 'Développement web',
+    desc: 'De l\'analyse des besoins au déploiement. APIs robustes, UX soignée.',
     tags: ['React.js', 'Node.js', 'Express.js', 'FastAPI', 'Firebase', 'MongoDB', 'MySQL', 'PostgreSQL', 'Docker', 'REST API'],
-  }
+  },
 ]
 
 // ── Projects ──────────────────────────────────────────────────
@@ -120,10 +119,10 @@ export const projects: Project[] = [
     image: chatbotImg,
   },
   {
-    id: 'AI powered financial news bias dashboard',
+    id: 'news-dashboard',
     name: 'AI powered financial news bias dashboard',
     subtitle: 'application web de signaux de sentiment de marché',
-    desc: 'Un dashboard integrant IA qui analyse les articles d actualité financière pour générer des signaux (haussiers, baissiers ou neutres) pour divers classes d actifs',
+    desc: 'Un dashboard intégrant l\'IA qui analyse les articles d\'actualité financière pour générer des signaux (haussiers, baissiers ou neutres) pour diverses classes d\'actifs.',
     tags: ['React.js', 'Mistral AI', 'mySQL', 'fastAPI'],
     category: 'IA',
     github: 'https://github.com/Samah-elqarnia',
@@ -139,14 +138,13 @@ export const projects: Project[] = [
     github: 'https://github.com/Samah-elqarnia',
     image: topautoImg,
   },
-
   {
     id: 'quant',
     name: 'pipeline de construction quantitative du portfolio',
     subtitle: 'Pipeline quantitative',
     desc: 'Full quantitative asset selection and portfolio optimization workflow using S&P 500 stocks, factor models, clustering, and modern portfolio theory.',
     tags: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'ML'],
-    category: 'Finance quantitative',
+    category: 'machine learbning & quant',
     github: 'https://github.com/Samah-elqarnia',
     image: quantImg,
   },
@@ -154,7 +152,7 @@ export const projects: Project[] = [
     id: 'fraud',
     name: 'detection de fraud sur les transactions bancaires',
     subtitle: 'application web de detection de fraud',
-    desc: 'interface web qui analyse les transactions en temps reel, et detecte si une transaction est legitime ou frauduleuse grace au modéle de regression logistique',
+    desc: 'Interface web qui analyse les transactions en temps réel et détecte si une transaction est légitime ou frauduleuse grâce au modèle de régression logistique.',
     tags: ['React.js', 'FastApi', 'Scikit-learn'],
     category: 'machine learning',
     github: 'https://github.com/Samah-elqarnia',
@@ -222,6 +220,8 @@ export const certifications = [
   { name: 'AWS foundations ', org: 'AWS', image: awsfound },
   { name: 'Python Essentials 1', org: 'Cisco Network Academy', image: python1 },
   { name: 'Python Essentials 2', org: 'Cisco Network Academy', image: python2 },
+  { name: 'english certificate (C2 proficient)', org: 'EF SET ', image: admin1 },
+  { name: 'Machine Learning Scientist in Python', org: 'Datacamp', image: ml },
   { name: 'AI fundamentals with IBM', org: 'cisco network academy', image: AI },
   { name: 'MCP : Advanced topics', org: 'Anthropic', image: advancedmcp },
   { name: 'Introduction to MCP', org: 'Anthropic', image: mcp },
@@ -233,7 +233,7 @@ export const certifications = [
   { name: 'Linux Unhatched & Essentials', org: 'Cisco Network Academy', image: linux },
   { name: 'CCNA', org: 'Cisco Network Academy', image: ccna },
   { name: 'System Administration 1', org: 'Red Hat Academy', image: admin1 },
-
+  { name: 'System Administration 2', org: 'Red Hat Academy', image: '/certificates/sysadmin2.jpg' },
 ]
 
 // ── Tech Stack ────────────────────────────────────────────────
