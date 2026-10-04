@@ -3,24 +3,22 @@ import Script from 'next/script'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Samah EL QARNIA — Software Engineer & Fintech',
+  title: 'Samah EL QARNIA — AI Engineer & data scientist',
   description:
-    'Portfolio of Samah EL QARNIA — Computer Science Engineer specializing in Fintech, Full Stack Development and Artificial Intelligence. ENSET Mohammedia.',
+    'Portfolio of Samah EL QARNIA — Computer Science Engineer specializing in machine learning and AI engineering ',
   keywords: [
     'Samah EL QARNIA',
     'Software Engineer',
-    'Fintech',
+    'AI Engineer',
+    'Data Scientist',
+    'Machine Learning',
+    'Artificial Intelligence',
     'Full Stack Developer',
-    'React',
-    'FastAPI',
-    'LangChain',
-    'ENSET Mohammedia',
-    'Morocco',
   ],
   authors: [{ name: 'Samah EL QARNIA', url: 'https://github.com/Samah-elqarnia' }],
   openGraph: {
     title: 'Samah EL QARNIA — Software Engineer',
-    description: 'Computer Science Engineer — Fintech · Full Stack · AI',
+    description: 'Computer Science Engineer —  data science · AI',
     type: 'website',
   },
 }
