@@ -166,8 +166,8 @@ function ContactForm() {
                    uppercase font-semibold transition-all duration-200
                    disabled:opacity-60"
         style={{
-          background: status === 'done' ? '#6B8E23' : '#D4A017',
-          color: status === 'done' ? '#FFFFFF' : '#FFFFFF',
+          background: status === 'done' ? '#6B8E23' : '#FFFFFF',
+          color: status === 'done' ? '#FFFFFF' : '#D4A017',
         }}
       >
         {status === 'idle' && translations.contact.submit}

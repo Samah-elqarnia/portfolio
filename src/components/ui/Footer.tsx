@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer
       className="text-center py-8 px-[8%] mt-0"
-      style={{ borderTop: '0.5px solid rgba(212,160,23,0.12)' }}
+      style={{ borderTop: '0.5px solid rgba(0, 0, 0, 0.12)' }}
     >
       <p className="text-[11px] tracking-[2px] uppercase text-black/20">
         {translations.footer.copyright.replace('{year}', String(new Date().getFullYear()))}

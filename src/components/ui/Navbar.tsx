@@ -17,14 +17,14 @@ export default function Navbar() {
     <nav
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
-        background: scrolled ? 'rgba(250,248,245,0.9)' : 'rgba(250,248,245,0.75)',
+        background: scrolled ? 'rgba(227,180,72,0.95)' : 'rgba(227,180,72,0.9)',
         backdropFilter: 'blur(12px)',
-        borderBottom: scrolled ? '0.5px solid rgba(212,160,23,0.16)' : 'none',
+        borderBottom: scrolled ? '0.5px solid rgba(255,255,255,0.2)' : 'none',
       }}
     >
       <div className="max-w-[1400px] mx-auto px-[8%] h-16 flex items-center justify-between">
         {/* Logo */}
-        <span className="font-serif text-[17px] tracking-[2px] text-mustard-light">
+        <span className="font-serif text-[22px] tracking-[2px] text-white">
           S. EL QARNIA
         </span>
 
@@ -34,8 +34,8 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-[11px] tracking-[1.5px] uppercase text-black-light
-                         hover:text-mustard transition-colors duration-200"
+              className="text-[13px] tracking-[1.5px] uppercase text-white/90
+                         hover:text-white transition-colors duration-200"
             >
               {link.label}
             </a>
@@ -50,15 +50,15 @@ export default function Navbar() {
             aria-label="Menu"
           >
             <span
-              className="block w-5 h-px bg-black-light transition-all duration-200"
+              className="block w-5 h-px bg-white transition-all duration-200"
               style={{ transform: menuOpen ? 'rotate(45deg) translateY(4px)' : 'none' }}
             />
             <span
-              className="block w-5 h-px bg-black-light transition-all duration-200"
+              className="block w-5 h-px bg-white transition-all duration-200"
               style={{ opacity: menuOpen ? 0 : 1 }}
             />
             <span
-              className="block w-5 h-px bg-black-light transition-all duration-200"
+              className="block w-5 h-px bg-white transition-all duration-200"
               style={{ transform: menuOpen ? 'rotate(-45deg) translateY(-4px)' : 'none' }}
             />
           </button>
@@ -70,8 +70,8 @@ export default function Navbar() {
         <div
           className="md:hidden border-t flex flex-col px-[8%] py-6 gap-5"
           style={{
-            background: 'rgba(250,248,245,0.98)',
-            borderColor: 'rgba(212,160,23,0.15)',
+            background: 'rgba(227,180,72,0.98)',
+            borderColor: 'rgba(255,255,255,0.2)',
           }}
         >
           {translations.navLinks.map((link) => (
@@ -79,8 +79,8 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="text-[12px] tracking-[2px] uppercase text-black-light
-                         hover:text-mustard transition-colors"
+              className="text-[12px] tracking-[2px] uppercase text-white/90
+                         hover:text-white transition-colors"
             >
               {link.label}
             </a>

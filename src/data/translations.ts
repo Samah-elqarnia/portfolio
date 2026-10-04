@@ -8,7 +8,7 @@ export const translations = {
     { href: '#contact', label: 'Contact' },
   ],
   hero: {
-    eyebrow: 'Computer Science engineer· Morocco',
+    eyebrow: 'Computer Science engineer',
     tagline: 'AI Engineer & data scientist passionate about designing predictive models and building intelligent systems.',
     contact: 'Contact me ↗',
     github: 'GitHub ↗',

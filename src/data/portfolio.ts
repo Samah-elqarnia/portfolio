@@ -57,20 +57,14 @@ export const skills = [
   {
     icon: '◉',
     title: 'Langages de Programmation',
-    desc: 'Solide base algorithmique et orientée objet, des systèmes embarqués au web.',
-    tags: ['Python', 'Java', 'C', 'Design Patterns', 'POO'],
+    desc: 'Solide base algorithmique et orientée objet ',
+    tags: ['Python', 'Java', 'C', 'SQL','POO'],
   },
   {
-    icon: '○',
-    title: 'Cloud & Virtualisation',
-    desc: 'Infrastructure, versioning , design et gestion de projets techniques.',
-    tags: ['Git', 'GitHub', 'AWS', 'Linux', 'Docker'],
-  },
-  {
-    icon: '⬡',
-    title: 'Développement Web Full-stack',
-    desc: 'Full-stack moderne, de l\'analyse des besoins au déploiement. APIs robustes, UX soignée.',
-    tags: ['React.js', 'Node.js', 'Express.js', 'FastAPI', 'Firebase', 'MongoDB', 'MySQL', 'PostgreSQL', 'Docker', 'REST API'],
+    icon: '◇',
+    title: 'Data Science',
+    desc: 'Analyse de données et machine learning pour extraire des insights et construire des modèles prédictifs.',
+    tags: ['Pandas', 'NumPy', 'Matplotlib', 'Scikit-learn', 'Statsmodels', 'Seaborn', 'TensorFlow', 'Keras'],
   },
   {
     icon: '◈',
@@ -79,16 +73,23 @@ export const skills = [
     tags: ['LangChain', 'RAG', 'LangGraph', 'LLMs', 'Qdrant', 'MCP'],
   },
   {
-    icon: '◇',
-    title: 'Data Science',
-    desc: 'Paiements, conformité, détection de fraude et gestion des risques financiers.',
-    tags: ['Stripe', 'Plaid', 'Risk Modeling', 'Fraud Detection'],
-  },
-  {
     icon: '◻',
     title: 'Finance Quantitative',
-    desc: 'Modélisation financière, pricing d\'options, optimisation de portefeuille et backtesting.',
-    tags: ['Black-Scholes', 'Delta Hedging', 'Greeks', 'NumPy', 'Pandas', 'Matplotlib', 'backtrader'],
+    desc: 'Modélisation quantitative des actifs financiers, optimisation de portefeuille et backtesting de stratégies',
+    tags: ['pricing', 'Monte Carlo', 'Factor Models', 'Modern Portfolio Theory', 'Backtesting'],
+  }
+  
+  ,{
+    icon: '○',
+    title: 'Cloud & Virtualisation',
+    desc: 'versioning et déploiement d\'applications web et de modèles ML/IA.',
+    tags: ['Git', 'GitHub', 'AWS', 'Linux', 'Docker'],
+  },
+  {
+    icon: '⬡',
+    title: ' Développement web ',
+    desc: 'de l\'analyse des besoins au déploiement. APIs robustes, UX soignée.',
+    tags: ['React.js', 'Node.js', 'Express.js', 'FastAPI', 'Firebase', 'MongoDB', 'MySQL', 'PostgreSQL', 'Docker', 'REST API'],
   }
 ]
 
@@ -163,23 +164,32 @@ export const projects: Project[] = [
 
 // ── Experience ────────────────────────────────────────────────
 export const experiences = [
-  {
-    date: 'Janv. 2025 → Janv. 2026',
-    role: 'Développeur Web — Freelance',
-    company: 'Indépendant',
+   {
+    date: 'Juin 2026 -> Juillet 2026',
+    role: 'stage ingénierie IA ',
+    company: 'ESFPP',
     points: [
-      'Application mobile de gestion pour une association de protection animale',
-      'Projets e-commerce full-stack de l\'analyse au déploiement',
-      'Stack : MERN, Firebase, Stripe, Clerk, Cloudinary, Inngest',
+      'Conçu et intégré une architecture avancée de Génération Augmentée par Récupération (RAG) ainsi qu\'une API dans un chatbot pédagogique propulsé par l\'IA, intégré au tableau de bord pedagogique de l\'école.',
+      'Stack : Python,LangChain, Mistral AI, Qdrant,React.js, FastAPI',
     ],
   },
   {
-    date: '4 Août → 29 Août 2025',
-    role: 'Développeur Web — Stage',
+    date: 'Juin 2026',
+    role: 'Stage virtuel en Recherche Quantitative',
+    company: 'JP Morgan Chase ',
+    points: [
+      'Conception d\'un modèle d\'estimation des prix et développement d\'une fonction de valorisation de contrats de stockage respectant les contraintes d\'injection, de retrait et de capacité.',
+      'Développement d\'un modèle de régression logistique pour estimer la probabilité de défaut et la perte attendue (expected loss), et mise en œuvre d\'une segmentation du score FICO (FICO score bucketing) par clustering k-means et programmation dynamique.',
+      'Stack : Pythons (NumPy, Pandas, Matplotlib, Scikit-learn)',
+    ],
+  },
+  {
+    date: 'Août 2025 → Septembre 2025',
+    role: 'Développeur Web Full stack — Stage',
     company: 'TOPAUTO Mohammedia',
     points: [
-      'Développement complet du site web : RDV en ligne, catalogue véhicules',
-      'Conception de l\'espace administrateur (gestion + suivi des opérations)',
+      'Développement complet du site web permettant au clients de prendre des RDV en ligne, consulter du catalogue véhicules et obtenir des informations sur les offres disponibles',
+      'Conception de l\'espace administrateur pour la gestion des données et le suivi des opérations',
       'Stack : React.js, Firebase (Auth, Firestore), Cloudinary',
     ],
   },
@@ -187,7 +197,7 @@ export const experiences = [
 
 export const education = [
   {
-    date: '2024 → 2026',
+    date: '2024 → 2027',
     role: 'Cycle Ingénieur : ingenierie informatique ',
     company: 'ENSET Mohammedia',
     points: [],
@@ -195,7 +205,7 @@ export const education = [
   {
     date: '2022 → 2024',
     role: 'DEUST Sciences et Techniques',
-    company: 'FST Mohammedia',
+    company: 'Faculté des Sciences et Techniques, Mohammedia',
     points: [],
   },
   {

@@ -103,9 +103,9 @@ export function ButtonOutline({
       target={target}
       rel={target === '_blank' ? 'noopener noreferrer' : undefined}
       className="inline-flex items-center gap-2 text-[12px] tracking-[2px] uppercase
-                 font-medium px-8 py-3.5 rounded-full text-mustard
-                 hover:bg-[rgba(212,160,23,0.08)] transition-all duration-200"
-      style={{ border: '0.5px solid #D4A017' }}
+                 font-medium px-8 py-3.5 rounded-full text-white
+                 hover:bg-[rgba(255,255,255,0.1)] transition-all duration-200"
+      style={{ border: '0.5px solid #FFFFFF' }}
     >
       {children}
     </a>

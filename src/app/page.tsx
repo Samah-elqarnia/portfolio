@@ -10,33 +10,56 @@ import Footer from '@/components/ui/Footer'
 
 export default function Home() {
   return (
-    <main className="bg-cream min-h-screen text-black">
+    <main className="min-h-screen">
       <Navbar />
-      <HeroSection />
-      <div className="max-w-[1400px] mx-auto px-[8%]">
-        <SectionDivider />
-        <AboutSection />
-        <SectionDivider />
-        <SkillsSection />
-        <SectionDivider />
-        <ProjectsSection />
-        <SectionDivider />
-        <ExperienceSection />
-        <SectionDivider />
-        <CertificationsSection />
-        <SectionDivider />
-        <ContactSection />
-      </div>
-      <Footer />
-    </main>
-  )
-}
 
-function SectionDivider() {
-  return (
-    <hr
-      className="border-none"
-      style={{ borderTop: '0.5px solid rgba(212,160,23,0.18)' }}
-    />
+      {/* Hero - Mustard Yellow */}
+      <div className="bg-mustard-light">
+        <HeroSection />
+      </div>
+
+      {/* About - White */}
+      <div className="bg-white">
+        <div className="max-w-[1400px] mx-auto px-[8%]">
+          <AboutSection />
+        </div>
+      </div>
+
+      {/* Skills - Cream */}
+      <div className="bg-cream">
+        <div className="max-w-[1400px] mx-auto px-[8%]">
+          <SkillsSection />
+        </div>
+      </div>
+
+      {/* Projects - Beige */}
+      <div className="bg-beige">
+        <div className="max-w-[1400px] mx-auto px-[8%]">
+          <ProjectsSection />
+        </div>
+      </div>
+
+      {/* Experience - White */}
+      <div className="bg-white">
+        <div className="max-w-[1400px] mx-auto px-[8%]">
+          <ExperienceSection />
+        </div>
+      </div>
+
+      {/* Certifications - Cream */}
+      <div className="bg-cream">
+        <div className="max-w-[1400px] mx-auto px-[8%]">
+          <CertificationsSection />
+        </div>
+      </div>
+
+      {/* Contact - Beige */}
+      <div className="bg-beige">
+        <div className="max-w-[1400px] mx-auto px-[8%]">
+          <ContactSection />
+        </div>
+      </div>
+
+    </main>
   )
 }
