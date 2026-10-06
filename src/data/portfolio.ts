@@ -3,9 +3,6 @@
 // ─────────────────────────────────────────────────────────────
 import chatbotImg from './assets/enerasist.png'
 import topautoImg from './assets/topauto.png'
-import luxepediaImg from './assets/luxepedia.png'
-import techplaceImg from './assets/techplace.png'
-import securityImg from './assets/website.png'
 import quantImg from './assets/quant.png'
 import newsImg from './assets/newsai.png'
 import FraudImg from './assets/fraud.png'
@@ -13,8 +10,6 @@ import python1 from './assets/python1.png'
 import python2 from './assets/python2.png'
 import ccna from './assets/CCNA.png'
 import AI from './assets//AI.png'
-import aws from './assets/aws.png'
-import python from './assets/python.png'
 import mongodb from './assets/mongodb.png'
 import mcp from './assets/MCP.png'
 import ml from './assets/ml.png'
@@ -23,17 +18,18 @@ import analysis from './assets/analysis.png'
 import derivatives from './assets/derivatives.png'
 import admin1 from './assets/admin1.png'
 import linux from './assets/linux.png'
-import adminforti from './assets/adminforti.png'
 import advancedmcp from './assets/advancedmcp.png'
 import awsfound from './assets/awsfound.png'
 import awssec from './assets/awssec.png'
-
+import scientist from './assets/python.png'
+import agent from './assets/agent.jpg'
+import history from './assets/history.png'
 
 
 export const personalInfo = {
   name: 'Samah EL QARNIA',
   title: 'AI Engineer & data scientist ',
-  tagline: 'Ingénieure logiciel et IA passionnée par la création de systèmes intelligents et résilients. J\'intègre l\'IA et le ML nativement dans des architectures Full Stack pour construire des produits numériques performants qui résolvent des problèmes complexes.',
+  tagline: 'Ingénieure IA passionnée par la création de systèmes intelligents . J\'intègre l\'IA et le ML nativement dans des architectures Full Stack pour construire des produits numériques  qui résolvent des problèmes complexes.',
   location: 'Maroc',
   email: 'elqarniasamah@gmail.com',
   phone: '+212 770 619 376',
@@ -64,13 +60,13 @@ export const skills = [
     icon: '◇',
     title: 'Data Science',
     desc: 'Analyse de données et machine learning pour extraire des insights et construire des modèles prédictifs.',
-    tags: ['Pandas', 'NumPy', 'Matplotlib', 'Scikit-learn', 'Statsmodels', 'Seaborn', 'TensorFlow', 'Keras'],
+    tags: ['Pandas', 'NumPy', 'Matplotlib', 'Scikit-learn', 'Seaborn', 'TensorFlow', 'Keras'],
   },
   {
     icon: '◈',
     title: 'Intelligence Artificielle',
     desc: 'Pipelines RAG, agents LLM et intégration de l\'IA dans des systèmes réels.',
-    tags: ['LangChain', 'RAG', 'LangGraph', 'LLMs', 'Qdrant', 'MCP'],
+    tags: ['LangChain', 'RAG', 'LangGraph', 'LLMs', 'MCP'], 
   },
   {
     icon: '◻',
@@ -88,7 +84,7 @@ export const skills = [
     icon: '⬡',
     title: 'Développement web',
     desc: 'De l\'analyse des besoins au déploiement. APIs robustes, UX soignée.',
-    tags: ['React.js', 'Node.js', 'Express.js', 'FastAPI', 'Firebase', 'MongoDB', 'MySQL', 'PostgreSQL', 'Docker', 'REST API'],
+    tags: ['React.js', 'Node.js', 'Express.js', 'FastAPI', 'Firebase', 'MongoDB', 'MySQL'],
   },
 ]
 
@@ -123,11 +119,44 @@ export const projects: Project[] = [
     name: 'AI powered financial news bias dashboard',
     subtitle: 'application web de signaux de sentiment de marché',
     desc: 'Un dashboard intégrant l\'IA qui analyse les articles d\'actualité financière pour générer des signaux (haussiers, baissiers ou neutres) pour diverses classes d\'actifs.',
-    tags: ['React.js', 'Mistral AI', 'mySQL', 'fastAPI'],
+    tags: ['React.js', 'Mistral AI', 'mySQL', 'RAG','fastAPI'],
     category: 'IA',
     github: 'https://github.com/Samah-elqarnia',
     image: newsImg,
   },
+  {
+    id: 'multi agent trading ',
+    name: 'CasaInvest',
+    subtitle: 'Système de Trading Multi-Agents pour le Marché Marocain',
+    desc: 'un système de décision multi-agents basé sur des LLM analysant la Bourse de Casablanca, avec des agents spécialisés en analyse fondamentale/macroéconomique, analyse technique, analyse d\'actualités et trading, orchestrés avec LangGraph.intégré des flux de données provenant de la CSE, de Bank Al-Maghrib et de sources d\'actualités marocaines via une couche API personnalisé',
+    tags: ['LangGraph', 'LangChain', 'Python','Pydantic','Docker'],
+    category: 'IA',
+    github: 'https://github.com/Samah-elqarnia',
+    image: agent,
+  },
+  
+  {
+    id: 'quant',
+    name: 'pipeline de construction quantitative du portfolio',
+    subtitle: 'Pipeline quantitative',
+    desc: 'Full quantitative asset selection and portfolio optimization workflow using S&P 500 stocks, factor models, k-means clustering, and modern portfolio theory.',
+    tags: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'ML'],
+    category: 'machine learning & quant',
+    github: 'https://github.com/Samah-elqarnia',
+    image: quantImg,
+  },
+//  ML for trading 
+  {
+    id: 'quant',
+    name: 'Machine Learning for SPY Trading ',
+    subtitle: 'comparative study of Random Forest and CatBoost ML algos for SPY trading',
+    desc: 'Empirical study on training data requirements for ML trading algorithms. Shows CatBoost outperforms Random Forest (+221% vs +164%) with full market ▎ history (1993-2026) but fails catastrophically with limited data, highlighting robustness vs performance tradeoffs.',
+    tags: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'ML'],
+    category: 'machine learning & quant',
+    github: 'https://github.com/Samah-elqarnia',
+    image: history,
+  },
+  //  AWS and wazuh project SIEM 
   {
     id: 'topauto',
     name: 'TOPAUTO',
@@ -137,16 +166,6 @@ export const projects: Project[] = [
     category: 'Web',
     github: 'https://github.com/Samah-elqarnia',
     image: topautoImg,
-  },
-  {
-    id: 'quant',
-    name: 'pipeline de construction quantitative du portfolio',
-    subtitle: 'Pipeline quantitative',
-    desc: 'Full quantitative asset selection and portfolio optimization workflow using S&P 500 stocks, factor models, clustering, and modern portfolio theory.',
-    tags: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'ML'],
-    category: 'machine learbning & quant',
-    github: 'https://github.com/Samah-elqarnia',
-    image: quantImg,
   },
   {
     id: 'fraud',
@@ -177,7 +196,7 @@ export const experiences = [
     company: 'JP Morgan Chase ',
     points: [
       'Conception d\'un modèle d\'estimation des prix et développement d\'une fonction de valorisation de contrats de stockage respectant les contraintes d\'injection, de retrait et de capacité.',
-      'Développement d\'un modèle de régression logistique pour estimer la probabilité de défaut et la perte attendue (expected loss), et mise en œuvre d\'une segmentation du score FICO (FICO score bucketing) par clustering k-means et programmation dynamique.',
+      'Développement d\'un modèle de régression logistique pour estimer la probabilité de défaut et la perte attendue, et mise en œuvre d\'une segmentation du score FICO par clustering k-means',
       'Stack : Pythons (NumPy, Pandas, Matplotlib, Scikit-learn)',
     ],
   },
@@ -216,24 +235,28 @@ export const education = [
 
 // ── Certifications ────────────────────────────────────────────
 export const certifications = [
+  // cloud 
   { name: 'AWS security foundations', org: 'AWS', image: awssec },
   { name: 'AWS foundations ', org: 'AWS', image: awsfound },
+  // language 
+  { name: 'english certificate (C2 proficient)', org: 'EF SET ', image: admin1 },
+  // data , python and AI 
   { name: 'Python Essentials 1', org: 'Cisco Network Academy', image: python1 },
   { name: 'Python Essentials 2', org: 'Cisco Network Academy', image: python2 },
-  { name: 'english certificate (C2 proficient)', org: 'EF SET ', image: admin1 },
-  { name: 'Machine Learning Scientist in Python', org: 'Datacamp', image: ml },
-  { name: 'AI fundamentals with IBM', org: 'cisco network academy', image: AI },
-  { name: 'MCP : Advanced topics', org: 'Anthropic', image: advancedmcp },
-  { name: 'Introduction to MCP', org: 'Anthropic', image: mcp },
-  { name: 'introduction to data science', org: 'Cisco Network Academy', image: datascience },
+  { name: 'Machine Learning Scientist in Python', org: 'Datacamp', image: ml},
   { name: 'machine learning', org: '325 Financial Analyst', image: ml },
+  { name: 'AI fundamentals with IBM', org: 'cisco network academy', image: AI },
+  { name: 'Introduction to MCP', org: 'Anthropic', image: mcp },
+  { name: 'MCP : Advanced topics', org: 'Anthropic', image: advancedmcp },
+  { name: 'introduction to data science', org: 'Cisco Network Academy', image: datascience },
+  
+  // finance 
   { name: 'Derivatives', org: '325 Financial Analyst', image: derivatives },
   { name: 'Technical Analysis', org: '325 Financial Analyst', image: analysis },
-  { name: 'introduction to mongodb', org: 'MongoDB', image: mongodb },
+  // reseau and OS 
   { name: 'Linux Unhatched & Essentials', org: 'Cisco Network Academy', image: linux },
   { name: 'CCNA', org: 'Cisco Network Academy', image: ccna },
   { name: 'System Administration 1', org: 'Red Hat Academy', image: admin1 },
-  { name: 'System Administration 2', org: 'Red Hat Academy', image: '/certificates/sysadmin2.jpg' },
 ]
 
 // ── Tech Stack ────────────────────────────────────────────────
